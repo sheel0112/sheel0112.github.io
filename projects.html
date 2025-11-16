@@ -25,20 +25,18 @@
         <div class="section-header">
           <h1>Projects</h1>
           <p class="section-intro">
-            A selection of work across personal finance, internal platforms, and analytics.
-            Each project is framed around the problem, constraints, and outcomes.
+            A selection of work across fintech, internal tooling, and analytics.
           </p>
         </div>
 
         <div class="grid grid-2">
+          
+          <!-- Finance app -->
           <article class="card hover-lift">
             <div class="card-body">
-              <p class="card-eyebrow">Personal finance</p>
+              <p class="card-eyebrow">Fintech</p>
               <h3>Stacked – Personal Finance App</h3>
-              <p>
-                Smart budgeting and spend tracking for young adults and couples, with automatic
-                categorisation and insight generation.
-              </p>
+              <p>Smart budgeting + auto-categorisation with personalised insights.</p>
             </div>
             <div class="card-footer">
               <div class="tag-row">
@@ -46,45 +44,38 @@
                 <span class="pill pill-soft">ML</span>
                 <span class="pill pill-soft">UX</span>
               </div>
-              <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+              <div class="card-actions">
+                <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+                <a class="card-link" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">
+                  View code on GitHub →
+                </a>
+              </div>
             </div>
           </article>
 
+          <!-- Other projects remain unchanged -->
           <article class="card hover-lift">
             <div class="card-body">
-              <p class="card-eyebrow">Banking operations</p>
+              <p class="card-eyebrow">Ops tooling</p>
               <h3>Internal Workflow Dashboard</h3>
-              <p>
-                A unified operational dashboard designed to reduce manual work, centralise approvals,
-                and expose bottlenecks for banking operations.
-              </p>
+              <p>End-to-end operations visibility for banking teams.</p>
             </div>
             <div class="card-footer">
-              <div class="tag-row">
-                <span class="pill pill-soft">Internal tools</span>
-                <span class="pill pill-soft">Operations</span>
-              </div>
               <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
 
           <article class="card hover-lift">
             <div class="card-body">
-              <p class="card-eyebrow">Risk & analytics</p>
+              <p class="card-eyebrow">Analytics</p>
               <h3>Spend Trends & Exceptions</h3>
-              <p>
-                Concept for an analytics layer to highlight recurring risk patterns, unusual spend,
-                and merchant anomalies for both customers and internal teams.
-              </p>
+              <p>Merchant clustering + anomaly detection for customer and risk teams.</p>
             </div>
             <div class="card-footer">
-              <div class="tag-row">
-                <span class="pill pill-soft">Analytics</span>
-                <span class="pill pill-soft">Risk</span>
-              </div>
               <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -96,8 +87,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

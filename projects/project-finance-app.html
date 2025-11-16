@@ -22,86 +22,62 @@
       <div class="container narrow">
         <a href="../projects.html" class="back-link">← Back to projects</a>
 
-        <p class="eyebrow eyebrow-soft">Personal finance · Fintech</p>
+        <p class="eyebrow eyebrow-soft">Fintech · Personal finance</p>
         <h1>Stacked – Personal Finance & Budgeting App</h1>
-        <p class="project-meta">
-          Role: Product manager · Focus: smart budgeting, ML-driven categorisation, and low-friction UX.
-        </p>
+        <p class="project-meta">Role: Product Manager • ML-driven spend insights</p>
+
+        <!-- CTA BUTTONS ADDED -->
+        <div class="hero-actions" style="margin-bottom: 20px;">
+          <a class="btn primary" href="#" target="_blank">Open live app (coming soon)</a>
+          <a class="btn ghost" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">View code on GitHub</a>
+        </div>
 
         <div class="pillbox">
           <h2>Summary</h2>
           <ul>
-            <li>Designed a personal finance tool aimed at young adults and couples who struggle to budget.</li>
-            <li>Built an experience that prioritises automation over manual spreadsheets.</li>
-            <li>Defined data contracts and flows that can scale to live banking integrations.</li>
+            <li>Personal finance tool designed around automation over manual budgeting.</li>
+            <li>ML-assisted transaction categorisation for cleaner insights.</li>
+            <li>System design built for open banking integrations.</li>
           </ul>
         </div>
 
         <h2>Context & problem</h2>
         <p>
-          Most budgeting tools assume users will manually tag transactions and maintain intricate
-          envelopes. In reality, many users want something closer to a “weekly financial pulse”
-          that highlights what matters without demanding constant effort.
+          Many budgeting tools assume users will manually maintain categories, envelopes and tags.
+          Stacked flips this: it prioritises automation, low effort, and clear month-end insights.
         </p>
-
-        <p>
-          The goal for Stacked was to provide clear answers to three questions:
-        </p>
-        <ul>
-          <li>Where is my money actually going?</li>
-          <li>What is normal for me vs unusual?</li>
-          <li>What one or two actions should I take this month?</li>
-        </ul>
 
         <h2>Constraints</h2>
         <ul>
-          <li>Designed to integrate with open banking APIs (e.g. TrueLayer) with minimal assumptions.</li>
-          <li>Limited time from users – interface had to work even if they rarely adjusted settings.</li>
-          <li>Needed to be explainable: insights should be traceable back to underlying data.</li>
+          <li>Built to integrate cleanly with APIs like TrueLayer.</li>
+          <li>Requires explainability for category/nudge decisions.</li>
+          <li>Mobile-first design for daily use and weekly summaries.</li>
         </ul>
 
         <h2>Approach</h2>
-        <h3>Understanding behaviours</h3>
-        <p>
-          I mapped out common money patterns for the target audience: irregular income, shared
-          expenses, subscriptions, and end-of-month stress. This informed core flows around
-          recurring vs discretionary spend and shared budgeting.
-        </p>
+        <h3>User behaviour insights</h3>
+        <p>Aimed at users who want clarity with minimal maintenance. No spreadsheets, no heavy UI.</p>
 
-        <h3>Shaping the system</h3>
-        <p>
-          I defined the end-to-end system as:
-        </p>
+        <h3>System shaping</h3>
         <ul>
-          <li>Ingestion: connect accounts, pull transactions, normalise merchants.</li>
-          <li>Categorisation: rule-based layer plus ML suggestions with confidence scores.</li>
-          <li>Insights: monthly and weekly summaries, anomaly flags, and gentle nudges.</li>
-          <li>Presentation: responsive web UI with a simple “home” view and deeper drill-downs.</li>
-        </ul>
-
-        <h3>Framing delivery</h3>
-        <p>
-          To keep scope controlled, I shaped an MVP around:
-        </p>
-        <ul>
-          <li>1–2 connected accounts.</li>
-          <li>Core categories (housing, food, transport, subscriptions, other).</li>
-          <li>One monthly email / summary view and a lightweight trends dashboard.</li>
+          <li>API ingestion → cleansing → categorisation engine → insights layer → UI.</li>
+          <li>Custom category rules + ML suggestions with confidence scores.</li>
+          <li>“One-screen” summary with drilldown for anomalies.</li>
         </ul>
 
         <h2>Outcomes</h2>
         <ul>
-          <li>A clear product narrative that resonates with users who dislike “traditional budgeting”.</li>
-          <li>System design ready to plug into real transaction feeds and extend over time.</li>
-          <li>Reusable components for future work on shared accounts and couple-focused features.</li>
+          <li>Clear product story and user value proposition.</li>
+          <li>Scalable data model for real bank feeds.</li>
+          <li>Foundation for shared budgeting and couple-mode.</li>
         </ul>
 
-        <h2>What I’d explore next</h2>
+        <h2>Next steps</h2>
         <p>
-          The next stage would be deeper support for shared finances (households / couples) and
-          improved explainability of ML decisions – making it obvious why certain transactions were
-          flagged or categorised the way they were.
+          Next iterations: deeper ML clusters, shared spending flows, and explainable insights for
+          end users.
         </p>
+
       </div>
     </section>
   </main>
@@ -113,7 +89,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

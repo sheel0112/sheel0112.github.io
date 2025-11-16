@@ -60,6 +60,7 @@
         </div>
 
         <div class="grid grid-3">
+          
           <!-- Finance app card -->
           <article class="card hover-lift">
             <div class="card-body">
@@ -76,16 +77,26 @@
                 <span class="pill pill-soft">Product strategy</span>
                 <span class="pill pill-soft">Data & ML</span>
               </div>
-              <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+
+              <!-- UPDATED LINKS -->
+              <div class="card-actions">
+                <a class="card-link" href="projects/project-finance-app.html">
+                  View case study →
+                </a>
+                <a class="card-link" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">
+                  View code on GitHub →
+                </a>
+              </div>
             </div>
           </article>
 
+          <!-- Other cards unchanged -->
           <article class="card hover-lift">
             <div class="card-body">
               <p class="card-eyebrow">Banking operations</p>
               <h3>Internal Workflow Dashboard</h3>
               <p>
-                Concept for a single pane of glass for operations teams – consolidating cases,
+                Single pane of glass for operations teams – consolidating cases,
                 approvals, and exceptions into one prioritised view.
               </p>
             </div>
@@ -103,8 +114,7 @@
               <p class="card-eyebrow">Customer insight</p>
               <h3>Spend Trends & Exceptions</h3>
               <p>
-                Analytics concept that surfaces monthly patterns, recurring risks, and outliers
-                directly in the banking UI for customers and internal risk teams.
+                Analytics concept surfacing monthly patterns, unusual spend, and merchant anomalies.
               </p>
             </div>
             <div class="card-footer">
@@ -115,6 +125,7 @@
               <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -127,13 +138,8 @@
         </div>
         <p>
           I’m a product manager working across risk, pricing, and internal tooling within financial
-          services. I spend most of my time translating real operational constraints into clear
-          product decisions, and partnering with engineers and analysts to ship reliable tools.
-        </p>
-        <p>
-          My work has covered internal trader and banking tooling, alerting and monitoring, and
-          customer-facing financial experiences. I care about clarity, fast feedback loops, and
-          building systems that stand up under real-world edge cases.
+          services. I partner with engineers, analysts, and ops to ship reliable tools that solve
+          real business problems.
         </p>
       </div>
     </section>
@@ -144,25 +150,19 @@
         <div class="section-header">
           <h2>Contact</h2>
         </div>
-        <p>
-          If you’d like to talk about product roles, collaboration, or just compare notes on
-          fintech and risk tooling, feel free to reach out.
-        </p>
-        <p>Email: <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn profile</a></p>
+        <p>If you'd like to talk product, fintech, or tooling:</p>
+        <p>Email: <a href="mailto:samheel01@gmail.com">you@yourdomain.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sam-heel-931513158/" target="_blank">Your LinkedIn</a></p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
