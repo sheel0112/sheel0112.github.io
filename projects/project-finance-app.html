@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header glass">
     <div class="container header-inner">
-      <div class="logo">Sam • Product Manager</div>
+      <div class="logo">Samuel Heel</div>
       <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../projects.html">Projects</a>
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../projects.html" class="nav-link">Projects</a>
       </nav>
     </div>
   </header>
@@ -22,71 +22,93 @@
       <div class="container narrow">
         <a href="../projects.html" class="back-link">← Back to projects</a>
 
+        <p class="eyebrow eyebrow-soft">Personal finance · Fintech</p>
         <h1>Stacked – Personal Finance & Budgeting App</h1>
-        <p class="project-meta">Product Manager • Fintech • ML-driven spend insights</p>
+        <p class="project-meta">
+          Role: Product manager · Focus: smart budgeting, ML-driven categorisation, and low-friction UX.
+        </p>
 
         <div class="pillbox">
           <h2>Summary</h2>
           <ul>
-            <li>Created a lightweight personal finance tool for young adults and couples.</li>
-            <li>Auto-categorises spend and surfaces nudges + monthly insights.</li>
-            <li>Designed scalable data contracts for bank APIs and analytics pipelines.</li>
+            <li>Designed a personal finance tool aimed at young adults and couples who struggle to budget.</li>
+            <li>Built an experience that prioritises automation over manual spreadsheets.</li>
+            <li>Defined data contracts and flows that can scale to live banking integrations.</li>
           </ul>
         </div>
 
-        <h2>Context & Problem</h2>
+        <h2>Context & problem</h2>
         <p>
-          Many budgeting tools overwhelm users with manual effort. The goal was to
-          create a simple, low-maintenance system that automatically categorises spend,
-          shows trends, and provides actionable suggestions.
+          Most budgeting tools assume users will manually tag transactions and maintain intricate
+          envelopes. In reality, many users want something closer to a “weekly financial pulse”
+          that highlights what matters without demanding constant effort.
         </p>
+
+        <p>
+          The goal for Stacked was to provide clear answers to three questions:
+        </p>
+        <ul>
+          <li>Where is my money actually going?</li>
+          <li>What is normal for me vs unusual?</li>
+          <li>What one or two actions should I take this month?</li>
+        </ul>
 
         <h2>Constraints</h2>
         <ul>
-          <li>Needed to integrate cleanly with existing bank APIs (TrueLayer).</li>
-          <li>Designed for low manual input — automation-first.</li>
-          <li>Simplified UI to avoid overwhelming users.</li>
+          <li>Designed to integrate with open banking APIs (e.g. TrueLayer) with minimal assumptions.</li>
+          <li>Limited time from users – interface had to work even if they rarely adjusted settings.</li>
+          <li>Needed to be explainable: insights should be traceable back to underlying data.</li>
         </ul>
 
         <h2>Approach</h2>
-        <h3>Understanding the user</h3>
+        <h3>Understanding behaviours</h3>
         <p>
-          Interviews showed that users want “just enough insight” — not charts, but clarity.
-          This shaped the feature set around simple summaries and nudges.
+          I mapped out common money patterns for the target audience: irregular income, shared
+          expenses, subscriptions, and end-of-month stress. This informed core flows around
+          recurring vs discretionary spend and shared budgeting.
         </p>
 
-        <h3>Systems thinking & architecture</h3>
+        <h3>Shaping the system</h3>
         <p>
-          I defined end-to-end data flow from API ingestion → categorisation → ML tagging →
-          insights engine → UI layer. The focus was reliability and fast iteration.
+          I defined the end-to-end system as:
         </p>
-
-        <h3>Delivery</h3>
-        <p>
-          Built UI flows, data schema, and release plan. Added categorisation testing and
-          a fallback manual tagging system to handle edge cases.
-        </p>
-
-        <h2>Outcome</h2>
         <ul>
-          <li>Clear, actionable monthly summaries.</li>
-          <li>Automatic insights based on recurring vs one-off patterns.</li>
-          <li>Simple interface that works on mobile and desktop.</li>
+          <li>Ingestion: connect accounts, pull transactions, normalise merchants.</li>
+          <li>Categorisation: rule-based layer plus ML suggestions with confidence scores.</li>
+          <li>Insights: monthly and weekly summaries, anomaly flags, and gentle nudges.</li>
+          <li>Presentation: responsive web UI with a simple “home” view and deeper drill-downs.</li>
         </ul>
 
-        <h2>Next Steps</h2>
+        <h3>Framing delivery</h3>
         <p>
-          Expand the nudges engine, refine ML clustering, and introduce envelope budgeting
-          for couples trying to split expenses.
+          To keep scope controlled, I shaped an MVP around:
         </p>
+        <ul>
+          <li>1–2 connected accounts.</li>
+          <li>Core categories (housing, food, transport, subscriptions, other).</li>
+          <li>One monthly email / summary view and a lightweight trends dashboard.</li>
+        </ul>
 
+        <h2>Outcomes</h2>
+        <ul>
+          <li>A clear product narrative that resonates with users who dislike “traditional budgeting”.</li>
+          <li>System design ready to plug into real transaction feeds and extend over time.</li>
+          <li>Reusable components for future work on shared accounts and couple-focused features.</li>
+        </ul>
+
+        <h2>What I’d explore next</h2>
+        <p>
+          The next stage would be deeper support for shared finances (households / couples) and
+          improved explainability of ML decisions – making it obvious why certain transactions were
+          flagged or categorised the way they were.
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
     </div>
   </footer>
 

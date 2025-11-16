@@ -9,14 +9,14 @@
 </head>
 <body>
   <!-- Header / Nav -->
-  <header class="site-header">
+  <header class="site-header glass">
     <div class="container header-inner">
-      <div class="logo">Sam • Product Manager</div>
+      <div class="logo">Samuel Heel</div>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -24,14 +24,26 @@
   <main id="home">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-gradient"></div>
       <div class="container hero-inner">
-        <div>
-          <h1>Product manager focused on fintech, banking workflows, and data-driven tooling.</h1>
-          <p>
-            I work where product, engineering, and operations meet – turning messy financial workflows
-            into clear tools and experiences that people actually use.
+        <div class="hero-copy">
+          <p class="eyebrow">Product · Risk · Fintech</p>
+          <h1>Tools and experiences that make complex financial systems feel simple.</h1>
+          <p class="hero-subtitle">
+            I work at the edge of product, engineering, and risk – shaping internal platforms and
+            customer experiences for banking and trading teams.
           </p>
-          <a class="btn" href="projects.html">View my projects</a>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="projects.html">View projects</a>
+            <a class="btn ghost" href="#about">Learn more</a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="pill">Internal tooling</span>
+            <span class="pill">Risk & pricing</span>
+            <span class="pill">Data-driven decisions</span>
+          </div>
         </div>
       </div>
     </section>
@@ -39,47 +51,68 @@
     <!-- Featured Projects -->
     <section id="projects" class="section">
       <div class="container">
-        <h2>Featured Projects</h2>
-        <p class="section-intro">
-          A selection of projects across personal finance, internal tooling, and process improvements.
-          Larger projects link out to live demos or full case studies.
-        </p>
+        <div class="section-header">
+          <h2>Selected work</h2>
+          <p class="section-intro">
+            A small set of projects that show how I think about systems, users, and delivery
+            in regulated financial environments.
+          </p>
+        </div>
 
-        <div class="grid">
+        <div class="grid grid-3">
           <!-- Finance app card -->
-          <article class="card">
-            <h3>Stacked – Personal Finance & Budgeting App</h3>
-            <p>
-              A web app for young adults and couples that connects to bank accounts, categorises spend,
-              and surfaces simple, automated budgeting suggestions.
-            </p>
-            <p class="tags">Fintech • Product Strategy • Data & ML</p>
-            <div class="card-actions">
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Personal finance</p>
+              <h3>Stacked – Personal Finance & Budgeting App</h3>
+              <p>
+                A web app for young adults and couples that connects to bank accounts,
+                categorises spend, and surfaces simple, automated budgeting suggestions.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Fintech</span>
+                <span class="pill pill-soft">Product strategy</span>
+                <span class="pill pill-soft">Data & ML</span>
+              </div>
               <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
             </div>
           </article>
 
-          <article class="card">
-            <h3>Internal Banking Workflow Dashboard</h3>
-            <p>
-              Concept for a single pane of glass for operations teams – consolidating cases, approvals,
-              and exceptions into one prioritised view.
-            </p>
-            <p class="tags">Internal Tools • Banking Ops</p>
-            <div class="card-actions">
-              <a class="card-link" href="#">Case study (coming soon) →</a>
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Banking operations</p>
+              <h3>Internal Workflow Dashboard</h3>
+              <p>
+                Concept for a single pane of glass for operations teams – consolidating cases,
+                approvals, and exceptions into one prioritised view.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Internal tools</span>
+                <span class="pill pill-soft">Workflow design</span>
+              </div>
+              <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
 
-          <article class="card">
-            <h3>Customer Insights & Spend Trends</h3>
-            <p>
-              Lightweight analytics concept that surfaces monthly trends, merchant clusters, and
-              money-leak insights directly in the banking UI.
-            </p>
-            <p class="tags">Customer Experience • Analytics</p>
-            <div class="card-actions">
-              <a class="card-link" href="#">Case study (coming soon) →</a>
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Customer insight</p>
+              <h3>Spend Trends & Exceptions</h3>
+              <p>
+                Analytics concept that surfaces monthly patterns, recurring risks, and outliers
+                directly in the banking UI for customers and internal risk teams.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Analytics</span>
+                <span class="pill pill-soft">CX</span>
+              </div>
+              <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
         </div>
@@ -89,15 +122,18 @@
     <!-- About -->
     <section id="about" class="section section-alt">
       <div class="container narrow">
-        <h2>About</h2>
+        <div class="section-header">
+          <h2>About</h2>
+        </div>
         <p>
-          I’m a product manager with experience across risk, pricing, and internal tooling in highly
-          regulated environments. I enjoy working closely with engineers, analysts, and operations to
-          define clear problem statements, shape pragmatic solutions, and see them through to delivery.
+          I’m a product manager working across risk, pricing, and internal tooling within financial
+          services. I spend most of my time translating real operational constraints into clear
+          product decisions, and partnering with engineers and analysts to ship reliable tools.
         </p>
         <p>
-          This portfolio focuses on ideas and projects in banking and personal finance – from user-facing
-          budgeting tools to internal dashboards that reduce manual effort and improve decision-making.
+          My work has covered internal trader and banking tooling, alerting and monitoring, and
+          customer-facing financial experiences. I care about clarity, fast feedback loops, and
+          building systems that stand up under real-world edge cases.
         </p>
       </div>
     </section>
@@ -105,10 +141,15 @@
     <!-- Contact -->
     <section id="contact" class="section">
       <div class="container narrow">
-        <h2>Contact</h2>
-        <p>If you’d like to talk about product roles, collaboration, or fintech tooling:</p>
+        <div class="section-header">
+          <h2>Contact</h2>
+        </div>
+        <p>
+          If you’d like to talk about product roles, collaboration, or just compare notes on
+          fintech and risk tooling, feel free to reach out.
+        </p>
         <p>Email: <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
-        <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
+        <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn profile</a></p>
       </div>
     </section>
   </main>
@@ -116,7 +157,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
     </div>
   </footer>
 

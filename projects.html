@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Projects – Sam</title>
+  <title>Projects – Samuel Heel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header class="site-header">
+  <header class="site-header glass">
     <div class="container header-inner">
-      <div class="logo">Sam • Product Manager</div>
+      <div class="logo">Samuel Heel</div>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -23,41 +22,68 @@
   <main>
     <section class="section">
       <div class="container">
-        <h1>Projects</h1>
-        <p class="section-intro">
-          A selection of projects across internal tooling, fintech, and analytics.
-          Case studies go deeper into outcomes, constraints, and how they were delivered.
-        </p>
+        <div class="section-header">
+          <h1>Projects</h1>
+          <p class="section-intro">
+            A selection of work across personal finance, internal platforms, and analytics.
+            Each project is framed around the problem, constraints, and outcomes.
+          </p>
+        </div>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Stacked – Personal Finance App</h3>
-            <p>
-              A smart budgeting and spend-tracking app that learns user behaviour and surfaces
-              personalised recommendations.
-            </p>
-            <p class="tags">Fintech • ML • UX</p>
-            <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+        <div class="grid grid-2">
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Personal finance</p>
+              <h3>Stacked – Personal Finance App</h3>
+              <p>
+                Smart budgeting and spend tracking for young adults and couples, with automatic
+                categorisation and insight generation.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Fintech</span>
+                <span class="pill pill-soft">ML</span>
+                <span class="pill pill-soft">UX</span>
+              </div>
+              <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Internal Banking Workflow Dashboard</h3>
-            <p>
-              A unified operational dashboard to reduce manual work and streamline approvals,
-              built around real workflow constraints.
-            </p>
-            <p class="tags">Internal Tools • Ops</p>
-            <a class="card-link" href="#">Case study (coming soon) →</a>
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Banking operations</p>
+              <h3>Internal Workflow Dashboard</h3>
+              <p>
+                A unified operational dashboard designed to reduce manual work, centralise approvals,
+                and expose bottlenecks for banking operations.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Internal tools</span>
+                <span class="pill pill-soft">Operations</span>
+              </div>
+              <a class="card-link muted" href="#">Case study coming soon</a>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Customer Spend Insights</h3>
-            <p>
-              Modular analytics layer to give customers personalised monthly impact summaries,
-              category anomalies, and merchant clustering.
-            </p>
-            <p class="tags">Analytics • CX</p>
-            <a class="card-link" href="#">Case study (coming soon) →</a>
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Risk & analytics</p>
+              <h3>Spend Trends & Exceptions</h3>
+              <p>
+                Concept for an analytics layer to highlight recurring risk patterns, unusual spend,
+                and merchant anomalies for both customers and internal teams.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Analytics</span>
+                <span class="pill pill-soft">Risk</span>
+              </div>
+              <a class="card-link muted" href="#">Case study coming soon</a>
+            </div>
           </article>
         </div>
       </div>
@@ -66,7 +92,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
     </div>
   </footer>
 
