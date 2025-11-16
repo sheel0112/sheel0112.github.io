@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects – Sam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Sam • Product Manager</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="section-intro">
+          A selection of projects across internal tooling, fintech, and analytics.
+          Case studies go deeper into outcomes, constraints, and how they were delivered.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Stacked – Personal Finance App</h3>
+            <p>
+              A smart budgeting and spend-tracking app that learns user behaviour and surfaces
+              personalised recommendations.
+            </p>
+            <p class="tags">Fintech • ML • UX</p>
+            <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+          </article>
+
+          <article class="card">
+            <h3>Internal Banking Workflow Dashboard</h3>
+            <p>
+              A unified operational dashboard to reduce manual work and streamline approvals,
+              built around real workflow constraints.
+            </p>
+            <p class="tags">Internal Tools • Ops</p>
+            <a class="card-link" href="#">Case study (coming soon) →</a>
+          </article>
+
+          <article class="card">
+            <h3>Customer Spend Insights</h3>
+            <p>
+              Modular analytics layer to give customers personalised monthly impact summaries,
+              category anomalies, and merchant clustering.
+            </p>
+            <p class="tags">Analytics • CX</p>
+            <a class="card-link" href="#">Case study (coming soon) →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

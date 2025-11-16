@@ -1,4 +1,3 @@
-/* Basic reset */
 *,
 *::before,
 *::after {
@@ -25,7 +24,7 @@ body {
   max-width: 720px;
 }
 
-/* Header & nav */
+/* Header */
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -38,7 +37,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 12px 0;
 }
 
 .logo {
@@ -61,7 +60,7 @@ body {
 .hero {
   background: #111827;
   color: #f9fafb;
-  padding: 64px 0 56px;
+  padding: 64px 0;
 }
 
 .hero-inner {
@@ -73,7 +72,6 @@ body {
 .hero h1 {
   font-size: 28px;
   line-height: 1.25;
-  margin-bottom: 12px;
 }
 
 .hero p {
@@ -82,7 +80,6 @@ body {
   color: #e5e7eb;
 }
 
-/* Button */
 .btn {
   display: inline-block;
   margin-top: 16px;
@@ -98,7 +95,7 @@ body {
   background: #1d4ed8;
 }
 
-/* Sections */
+/* Section spacing */
 .section {
   padding: 48px 0;
 }
@@ -107,20 +104,7 @@ body {
   background: #f3f4f6;
 }
 
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 22px;
-}
-
-.section-intro {
-  max-width: 600px;
-  margin-bottom: 24px;
-  font-size: 14px;
-  color: #4b5563;
-}
-
-/* Grid & cards */
+/* Grid cards */
 .grid {
   display: grid;
   gap: 20px;
@@ -128,29 +112,25 @@ body {
 
 @media (min-width: 720px) {
   .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .card {
   background: #ffffff;
-  border-radius: 8px;
-  padding: 18px 18px 20px;
   border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .card h3 {
   margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .card p {
-  margin-top: 0;
-  margin-bottom: 8px;
   font-size: 14px;
   color: #4b5563;
 }
@@ -158,68 +138,54 @@ body {
 .tags {
   font-size: 12px;
   color: #6b7280;
-}
-
-.card-actions {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.card-link,
-.card-link-secondary {
-  font-size: 13px;
-  text-decoration: none;
+  margin-top: 4px;
 }
 
 .card-link {
+  margin-top: 8px;
+  font-size: 14px;
   color: #2563eb;
+  text-decoration: none;
 }
 
-.card-link-secondary {
-  color: #6b7280;
-}
-
-.card-link:hover,
-.card-link-secondary:hover {
+.card-link:hover {
   text-decoration: underline;
 }
 
-/* About & contact */
-#about p,
-#contact p {
+/* Case study */
+.back-link {
   font-size: 14px;
-  color: #374151;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.back-link:hover {
+  color: #111827;
+}
+
+.project-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.pillbox {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.pillbox ul {
+  padding-left: 20px;
 }
 
 /* Footer */
 .site-footer {
   border-top: 1px solid #e5e7eb;
-  background: #ffffff;
-  padding: 16px 0;
-  font-size: 13px;
+  padding: 20px 0;
   color: #6b7280;
-  margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
 }
-
-/* Responsive tweaks */
-@media (max-width: 640px) {
-  .nav a {
-    margin-left: 10px;
-    font-size: 13px;
-  }
-
-  .hero {
-    padding: 40px 0 36px;
-  }
-
-  .hero h1 {
-    font-size: 22px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-}
-

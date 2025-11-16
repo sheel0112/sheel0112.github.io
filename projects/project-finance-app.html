@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stacked – Personal Finance App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Sam • Product Manager</div>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <a href="../projects.html" class="back-link">← Back to projects</a>
+
+        <h1>Stacked – Personal Finance & Budgeting App</h1>
+        <p class="project-meta">Product Manager • Fintech • ML-driven spend insights</p>
+
+        <div class="pillbox">
+          <h2>Summary</h2>
+          <ul>
+            <li>Created a lightweight personal finance tool for young adults and couples.</li>
+            <li>Auto-categorises spend and surfaces nudges + monthly insights.</li>
+            <li>Designed scalable data contracts for bank APIs and analytics pipelines.</li>
+          </ul>
+        </div>
+
+        <h2>Context & Problem</h2>
+        <p>
+          Many budgeting tools overwhelm users with manual effort. The goal was to
+          create a simple, low-maintenance system that automatically categorises spend,
+          shows trends, and provides actionable suggestions.
+        </p>
+
+        <h2>Constraints</h2>
+        <ul>
+          <li>Needed to integrate cleanly with existing bank APIs (TrueLayer).</li>
+          <li>Designed for low manual input — automation-first.</li>
+          <li>Simplified UI to avoid overwhelming users.</li>
+        </ul>
+
+        <h2>Approach</h2>
+        <h3>Understanding the user</h3>
+        <p>
+          Interviews showed that users want “just enough insight” — not charts, but clarity.
+          This shaped the feature set around simple summaries and nudges.
+        </p>
+
+        <h3>Systems thinking & architecture</h3>
+        <p>
+          I defined end-to-end data flow from API ingestion → categorisation → ML tagging →
+          insights engine → UI layer. The focus was reliability and fast iteration.
+        </p>
+
+        <h3>Delivery</h3>
+        <p>
+          Built UI flows, data schema, and release plan. Added categorisation testing and
+          a fallback manual tagging system to handle edge cases.
+        </p>
+
+        <h2>Outcome</h2>
+        <ul>
+          <li>Clear, actionable monthly summaries.</li>
+          <li>Automatic insights based on recurring vs one-off patterns.</li>
+          <li>Simple interface that works on mobile and desktop.</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p>
+          Expand the nudges engine, refine ML clustering, and introduce envelope budgeting
+          for couples trying to split expenses.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
