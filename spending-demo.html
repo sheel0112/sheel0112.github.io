@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spending Tracker – Demo Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Reuse your main portfolio styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* App-specific styles layered on top of your existing theme */
+
+    body {
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
+    }
+
+    .app-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+    }
+
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.95), rgba(15,23,42,0.75));
+      border-bottom: 1px solid rgba(148,163,184,0.2);
+    }
+
+    .app-header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .app-logo {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #e5e7eb;
+    }
+
+    .app-nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .app-nav-link {
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+
+    .app-nav-link:hover {
+      color: #f9fafb;
+    }
+
+    .btn-small-primary {
+      background: linear-gradient(135deg, #3b82f6, #a855f7);
+      color: #fff;
+      border-radius: 10px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-small-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    /* Borrowed from your theme but scoped to the app */
+    .app-alert {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border-radius: 12px;
+      border: 1px solid rgba(96,165,250,0.5);
+      background: rgba(37,99,235,0.12);
+      padding: 10px 12px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: #dbeafe;
+    }
+
+    .app-alert-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(96,165,250,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .app-alert a {
+      color: #bfdbfe;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .app-hero-title {
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+
+    .app-hero-subtitle {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    /* Simple card system */
+    .app-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .app-grid-3 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .app-grid-2 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .app-grid-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 768px) {
+      .app-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .app-grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .app-grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .app-card {
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.12), transparent 60%),
+                  rgba(15,23,42,0.95);
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.25);
+      padding: 14px 14px 16px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    }
+
+    .app-card-header {
+      margin-bottom: 6px;
+    }
+
+    .app-card-title {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .app-card-value {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .app-card-sub {
+      font-size: 12px;
+      color: #fca5a5;
+      margin-top: 2px;
+    }
+
+    /* Quick actions */
+    .app-quick-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .app-quick-card {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .app-quick-card:hover {
+      opacity: 0.7;
+      transform: translateY(-1px);
+    }
+
+    .app-quick-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-quick-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .app-badge {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Chart & allocation placeholders */
+    .app-chart,
+    .app-allocation {
+      border-radius: 18px;
+      border: 1px dashed rgba(148,163,184,0.4);
+      padding: 16px;
+      background: rgba(15,23,42,0.9);
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .app-chart-title,
+    .app-allocation-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    /* Breakdown / insights layout */
+    .app-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .app-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(31,41,55,0.9);
+    }
+
+    .app-list li:last-child {
+      border-bottom: none;
+    }
+
+    .app-tag-pill {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      color: #e5e7eb;
+    }
+
+    /* CTA card */
+    .app-cta {
+      text-align: center;
+      border-radius: 20px;
+      border: 1px solid rgba(59,130,246,0.4);
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.2), rgba(88,28,135,0.2));
+      padding: 28px 20px;
+      margin-top: 28px;
+    }
+
+    .app-cta-title {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .app-cta-sub {
+      font-size: 14px;
+      color: #cbd5f5;
+      margin-bottom: 18px;
+    }
+
+    .app-cta button {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- App-style header -->
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="app-logo">Spending Tracker</div>
+      <nav class="app-nav">
+        <a href="#" class="app-nav-link">Sign In</a>
+        <a href="#" class="btn-small-primary">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="app-container">
+      <!-- Demo banner -->
+      <div class="app-alert">
+        <div class="app-alert-icon">i</div>
+        <div>
+          You&apos;re viewing a demo with sample data. In the live version you’d connect your
+          accounts, upload CSVs, and track real spending. <a href="#">Get started</a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div style="margin-bottom: 24px;">
+        <h1 class="app-hero-title">Dashboard</h1>
+        <p class="app-hero-subtitle">Welcome back, demo user. All figures below are sample values.</p>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="app-grid app-grid-3" style="margin-bottom: 28px;">
+        <div class="app-card" style="background: linear-gradient(135deg, #eff6ff, #dbeafe0f);">
+          <div class="app-card-header">
+            <div class="app-card-title" style="color:#1d4ed8;">Total Transactions</div>
+          </div>
+          <div class="app-card-value" style="color:#1e3a8a;">132</div>
+        </div>
+
+        <div class="app-card" style="background: linear-gradient(135deg, #fef2f2, #fee2e20f);">
+          <div class="app-card-header">
+            <div class="app-card-title" style="color:#b91c1c;">Spending This Month</div>
+          </div>
+          <div class="app-card-value" style="color:#7f1d1d;">£2,345.67</div>
+          <div class="app-card-sub">After refunds</div>
+        </div>
+
+        <div class="app-card" style="background: linear-gradient(135deg, #ecfdf3, #bbf7d00f);">
+          <div class="app-card-header">
+            <div class="app-card-title" style="color:#166534;">Income This Month</div>
+          </div>
+          <div class="app-card-value" style="color:#14532d;">£3,950.00</div>
+          <div class="app-card-sub" style="color:#16a34a;">Net: £1,604.33</div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <div style="margin-bottom: 28px;">
+        <h2 class="app-quick-title">Quick actions</h2>
+        <div class="app-grid app-grid-4">
+          <div class="app-card app-quick-card">
+            <div class="app-quick-inner">
+              <div class="app-quick-icon" style="background:#dbeafe;color:#1d4ed8;">🏦</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">Banks</div>
+                <div class="app-badge">Demo mode</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card app-quick-card">
+            <div class="app-quick-inner">
+              <div class="app-quick-icon" style="background:#ede9fe;color:#7c3aed;">⤴️</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">Upload</div>
+                <div class="app-badge">Demo mode</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card app-quick-card">
+            <div class="app-quick-inner">
+              <div class="app-quick-icon" style="background:#dcfce7;color:#16a34a;">📊</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">Analytics</div>
+                <div class="app-badge">Demo mode</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card app-quick-card">
+            <div class="app-quick-inner">
+              <div class="app-quick-icon" style="background:#ffedd5;color:#ea580c;">✨</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">Smart ML</div>
+                <div class="app-badge">Demo mode</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart placeholder -->
+      <div class="app-chart" style="margin-bottom: 24px;">
+        <div class="app-chart-title">Spending trends (sample)</div>
+        <div style="height: 140px; border-radius: 12px; background: repeating-linear-gradient(
+                to right,
+                rgba(55,65,81,0.5),
+                rgba(55,65,81,0.5) 1px,
+                transparent 1px,
+                transparent 6px
+              ); display:flex;align-items:center;justify-content:center;color:#6b7280;font-size:12px;">
+          Line chart placeholder – in the real app this is fully interactive.
+        </div>
+      </div>
+
+      <!-- Allocation placeholder -->
+      <div class="app-allocation" style="margin-bottom: 24px;">
+        <div class="app-allocation-title">Budget allocation (sample)</div>
+        <p style="margin-bottom:10px;">Allocated: £3,000 · Spent: £2,345.67</p>
+        <div class="app-grid app-grid-4">
+          <span class="app-tag-pill">Housing · £1,200</span>
+          <span class="app-tag-pill">Food · £550</span>
+          <span class="app-tag-pill">Transport · £220</span>
+          <span class="app-tag-pill">Leisure · £300</span>
+        </div>
+      </div>
+
+      <!-- Breakdown grid -->
+      <div class="app-grid app-grid-2" style="margin-bottom: 24px;">
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-title">Spending by category (sample)</div>
+          </div>
+          <ul class="app-list">
+            <li><span>Housing</span><span>£1,200 · 51%</span></li>
+            <li><span>Food & Groceries</span><span>£520 · 22%</span></li>
+            <li><span>Transport</span><span>£210 · 9%</span></li>
+            <li><span>Leisure & Subscriptions</span><span>£290 · 12%</span></li>
+            <li><span>Other</span><span>£125 · 6%</span></li>
+          </ul>
+        </div>
+
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-title">Income sources (sample)</div>
+          </div>
+          <ul class="app-list">
+            <li><span>Salary</span><span>£3,200 · 81%</span></li>
+            <li><span>Freelance</span><span>£500 · 13%</span></li>
+            <li><span>Other</span><span>£250 · 6%</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Insights & widgets -->
+      <div class="app-grid app-grid-3">
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-title">Spending insights (sample)</div>
+          </div>
+          <ul class="app-list">
+            <li><span>Subscriptions are +18% vs last month</span></li>
+            <li><span>Groceries trending down week-on-week</span></li>
+            <li><span>Transport is higher than your usual range</span></li>
+          </ul>
+        </div>
+
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-title">Top merchants (sample)</div>
+          </div>
+          <ul class="app-list">
+            <li><span>Supermart</span><span>£320</span></li>
+            <li><span>City Transport</span><span>£150</span></li>
+            <li><span>Streamflix</span><span>£39</span></li>
+          </ul>
+        </div>
+
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-title">Recent transactions (sample)</div>
+          </div>
+          <ul class="app-list">
+            <li><span>Supermart – Groceries</span><span>£64.20</span></li>
+            <li><span>City Transport – Travel</span><span>£18.40</span></li>
+            <li><span>Streamflix – Subscriptions</span><span>£12.99</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="app-cta">
+        <h2 class="app-cta-title">Ready to plug in real data?</h2>
+        <p class="app-cta-sub">
+          In production, this dashboard would be driven by open banking APIs and your own transaction history.
+        </p>
+        <button class="btn-small-primary">Get started in the live app</button>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
