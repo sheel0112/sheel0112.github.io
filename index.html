@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sam – Product Manager Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Product manager focused on fintech, banking workflows, and data-driven tooling." />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Sam • Product Manager</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Product manager focused on fintech, banking workflows, and data-driven tooling.</h1>
+          <p>
+            I work where product, engineering, and operations meet – turning messy financial workflows
+            into clear tools and experiences that people actually use.
+          </p>
+          <a class="btn" href="#projects">View my projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-intro">
+          A selection of projects across personal finance, internal tooling, and process improvements.
+          Larger projects link out to live demos or full case studies.
+        </p>
+
+        <div class="grid">
+          <!-- Finance app card -->
+          <article class="card">
+            <h3>Stacked – Personal Finance & Budgeting App</h3>
+            <p>
+              A web app for young adults and couples that connects to bank accounts, categorises spend,
+              and surfaces simple, automated budgeting suggestions.
+            </p>
+            <p class="tags">Fintech • Product Strategy • Data & ML</p>
+            <div class="card-actions">
+              <!-- Replace these hrefs with your real URLs when ready -->
+              <a class="card-link" href="#" target="_blank" rel="noopener">
+                Open app (coming soon) →
+              </a>
+              <a class="card-link-secondary" href="#" target="_blank" rel="noopener">
+                View code (coming soon)
+              </a>
+            </div>
+          </article>
+
+          <!-- Example internal tooling project -->
+          <article class="card">
+            <h3>Internal Banking Workflow Dashboard</h3>
+            <p>
+              Concept for a single pane of glass for operations teams – consolidating cases, approvals,
+              and exceptions into one prioritised view.
+            </p>
+            <p class="tags">Internal Tools • Banking Ops</p>
+            <div class="card-actions">
+              <a class="card-link" href="#" target="_blank">
+                Read case study (soon) →
+              </a>
+            </div>
+          </article>
+
+          <!-- Placeholder project -->
+          <article class="card">
+            <h3>Customer Insights & Spend Trends</h3>
+            <p>
+              Lightweight analytics concept that surfaces monthly trends, merchant clusters, and
+              money-leak insights directly in the banking UI.
+            </p>
+            <p class="tags">Customer Experience • Analytics</p>
+            <div class="card-actions">
+              <a class="card-link" href="#" target="_blank">
+                Read case study (soon) →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="container narrow">
+        <h2>About</h2>
+        <p>
+          I’m a product manager with experience across risk, pricing, and internal tooling in highly
+          regulated environments. I enjoy working closely with engineers, analysts, and operations to
+          define clear problem statements, shape pragmatic solutions, and see them through to delivery.
+        </p>
+        <p>
+          This portfolio focuses on ideas and projects in banking and personal finance – from user-facing
+          budgeting tools to internal dashboards that reduce manual effort and improve decision-making.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <p>
+          If you’d like to talk about product roles, collaboration, or just compare notes on
+          fintech and internal tools, feel free to reach out.
+        </p>
+        <p>
+          Email:
+          <a href="mailto:you@yourdomain.com">you@yourdomain.com</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="#" target="_blank" rel="noopener">Your LinkedIn profile</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
