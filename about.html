@@ -5,7 +5,194 @@
   <title>About – Samuel Heel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="About Samuel Heel – Product leader specialising in risk, fintech, and internal tooling." />
+  <meta
+    name="description"
+    content="About Samuel Heel – product leader specialising in risk, fintech, and internal tooling."
+  />
+
+  <!-- Page-specific styling for the timeline -->
+  <style>
+    .about-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted, #9ca3af);
+      max-width: 52rem;
+    }
+
+    .about-intro p + p {
+      margin-top: 0.75rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.2rem;
+      top: 0.25rem;
+      bottom: 0.25rem;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(148, 163, 184, 0.8),
+        rgba(51, 65, 85, 0.3)
+      );
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      cursor: default;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -0.15rem;
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f9fafb, #3b82f6);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    }
+
+    .timeline-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+    }
+
+    .timeline-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .timeline-company {
+      font-size: 0.9rem;
+      color: var(--text-muted, #9ca3af);
+    }
+
+    .timeline-dates {
+      margin-left: auto;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted, #9ca3af);
+    }
+
+    @media (max-width: 640px) {
+      .timeline-dates {
+        margin-left: 0;
+      }
+    }
+
+    .timeline-summary {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--text-muted, #9ca3af);
+    }
+
+    .timeline-details {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-muted, #9ca3af);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: radial-gradient(
+        circle at top left,
+        rgba(148, 163, 184, 0.16),
+        rgba(15, 23, 42, 0.85)
+      );
+      padding: 0.75rem 0.9rem;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-2px);
+      transition:
+        max-height 0.25s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .timeline-item:hover .timeline-details {
+      max-height: 240px; /* enough for a short block of copy */
+      opacity: 1;
+      transform: translateY(0);
+      border-color: rgba(96, 165, 250, 0.7);
+      background: radial-gradient(
+        circle at top left,
+        rgba(59, 130, 246, 0.22),
+        rgba(15, 23, 42, 0.95)
+      );
+    }
+
+    .timeline-details ul {
+      margin: 0.25rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .timeline-details li {
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-hint {
+      font-size: 0.8rem;
+      color: var(--text-muted, #9ca3af);
+      margin-top: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .skills-card {
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(
+        circle at top left,
+        rgba(148, 163, 184, 0.16),
+        rgba(15, 23, 42, 0.9)
+      );
+      padding: 0.9rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .skills-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skills-tags .pill {
+      font-size: 0.75rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,26 +211,199 @@
   </header>
 
   <main>
+    <!-- Intro -->
     <section class="section">
       <div class="container narrow">
-
         <div class="section-header">
-          <h1>About Me</h1>
+          <h1>About</h1>
+        </div>
+
+        <div class="about-intro">
+          <p>
+            I’m a product leader working at the intersection of risk, data, and engineering. I focus on building tools that
+            make complex financial systems feel simple, intuitive, and reliable for the people who use them day to day.
+          </p>
+          <p>
+            Most of my recent work has been in live trading environments, where pricing, risk, and operational workflows
+            need to be both fast and safe. I enjoy translating technical depth into clear user journeys, joining up modelling,
+            data engineering, backend services, and frontend platforms into products that actually help people make better
+            decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience timeline -->
+    <section class="section section-alt">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <p class="section-intro">
+            A quick view of where I’ve worked and what I’ve been responsible for. Hover over each role to see more detail.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Angstrom – Lead Product Owner -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header-row">
+              <div>
+                <div class="timeline-role">Lead Product Owner – Digital Risk Platform</div>
+                <div class="timeline-company">Angstrom Sports (Entain) · Risk Department</div>
+              </div>
+              <div class="timeline-dates">Nov 2024 – Present</div>
+            </div>
+            <div class="timeline-summary">
+              Owning a £20m digital risk platform and leading a cross-functional team of 10+ to deliver pricing, risk,
+              and control tooling.
+            </div>
+            <div class="timeline-details">
+              <ul>
+                <li>Report directly to Head of Product and provide regular updates to C-suite on delivery progress, risk, and timelines.</li>
+                <li>Created the company’s first cross-functional risk product team across FE/BE, data engineering, and UI/UX.</li>
+                <li>Used AI to accelerate prototyping, cutting some front-end delivery cycles from 8 weeks to 2.</li>
+                <li>Drove automation and process simplification that reduced manual workload by ~40% and removed a major third-party dependency.</li>
+                <li>Introduced structured feedback loops, satisfaction scoring, and KPI tracking to improve usability and adoption.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Angstrom – Product Analyst / Shadow PO -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header-row">
+              <div>
+                <div class="timeline-role">Product Analyst & Shadow Product Owner – Baseball</div>
+                <div class="timeline-company">Angstrom Sports</div>
+              </div>
+              <div class="timeline-dates">Jan 2024 – Nov 2024</div>
+            </div>
+            <div class="timeline-summary">
+              Bridged analysis and product ownership, building automation for testing and supporting delivery across sports.
+            </div>
+            <div class="timeline-details">
+              <ul>
+                <li>Designed and built a Python-based UAT automation suite, later evolved into a web app using SignalR and React.</li>
+                <li>Cut testing time by ~50% and reduced missed regression errors by ~80% for in-house trading teams.</li>
+                <li>Defined Epics and wrote detailed user stories from complex business requirements for Agile teams.</li>
+                <li>Used SQL for data validation and product performance analysis to guide prioritisation.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Amelco -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header-row">
+              <div>
+                <div class="timeline-role">Sports Trader & Product Testing Specialist</div>
+                <div class="timeline-company">Amelco Limited</div>
+              </div>
+              <div class="timeline-dates">Mar 2022 – Dec 2023</div>
+            </div>
+            <div class="timeline-summary">
+              Sat between clients, ops, and engineering to ensure sports betting platforms met real user and regulatory needs.
+            </div>
+            <div class="timeline-details">
+              <ul>
+                <li>Coordinated between clients, vendors, and internal product/engineering to align expectations and delivery.</li>
+                <li>Standardised testing processes and supported high-volume, regulated SaaS deployments.</li>
+                <li>Introduced automation into testing and review flows to reduce manual overhead.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Performance analysis roles (grouped) -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header-row">
+              <div>
+                <div class="timeline-role">Senior & Lead Performance Analyst (Rugby & Football)</div>
+                <div class="timeline-company">
+                  PASS Analysis · Women’s Super League · Skylab · Hartpury · Cheltenham Town
+                </div>
+              </div>
+              <div class="timeline-dates">2016 – 2022</div>
+            </div>
+            <div class="timeline-summary">
+              Worked in elite sport environments, delivering real-time and post-match analysis to players and coaches.
+            </div>
+            <div class="timeline-details">
+              <ul>
+                <li>Supported England Rugby League, Toronto Wolfpack, Gloucester-Hartpury and others with match and opposition analysis.</li>
+                <li>Delivered live insight during games to support tactical adjustments and decision-making.</li>
+                <li>Managed full analysis workflows from data capture to reporting and coach / player feedback.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="timeline-hint">Tip: hover on a role to see more detail about scope, impact, and responsibilities.</p>
+      </div>
+    </section>
+
+    <!-- Skills & tools -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Skills & tools</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-card">
+            <h3>Product & delivery</h3>
+            <div class="skills-tags">
+              <span class="pill pill-soft">Roadmapping</span>
+              <span class="pill pill-soft">Stakeholder management</span>
+              <span class="pill pill-soft">Backlog shaping</span>
+              <span class="pill pill-soft">Agile / Scrum</span>
+              <span class="pill pill-soft">C-suite reporting</span>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <h3>Risk & data</h3>
+            <div class="skills-tags">
+              <span class="pill pill-soft">Risk platforms</span>
+              <span class="pill pill-soft">Pricing & exposure</span>
+              <span class="pill pill-soft">SQL / MySQL</span>
+              <span class="pill pill-soft">Python</span>
+              <span class="pill pill-soft">Analytics & KPIs</span>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <h3>Tooling & collaboration</h3>
+            <div class="skills-tags">
+              <span class="pill pill-soft">Jira & Confluence</span>
+              <span class="pill pill-soft">Figma</span>
+              <span class="pill pill-soft">Data visualisation</span>
+              <span class="pill pill-soft">UAT design</span>
+              <span class="pill pill-soft">Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & interests -->
+    <section class="section section-alt">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Education & interests</h2>
         </div>
 
         <p>
-          I’m a product leader working at the intersection of risk, data, and engineering. I specialise in building tools that make complex financial systems feel simple, intuitive, and reliable.
+          <strong>Education:</strong> MSc Applied Sports Performance Analysis (University of Worcester) and
+          BSc Sports and Exercise Science (University of Gloucestershire).
         </p>
-
         <p>
-          My experience spans technical product ownership, quantitative tooling, and cross-department delivery. I work closely with modelling, data engineering, backend services, and frontend teams to ship high-performance systems used in live trading environments.
-          I focus on pricing automation, alerting, exposure management, settlement workflows, and operational controls—products that blend real-time data, model outputs, and user-centred design.
+          <strong>Certification:</strong> Certified Scrum Product Owner (Scrum Alliance, 2024).
         </p>
-
         <p>
-          Outside of my core role, I build side projects combining data, automation, and thoughtful UX—from personal finance apps to an AI meeting assistant. I recently relocated to Bermuda, balancing island life with a continued interest in technology, system design, and creating clarity in complex data environments.
+          <strong>Interests:</strong> sailing, golf, CrossFit, travel, and community volunteering.
         </p>
-
       </div>
     </section>
   </main>
@@ -57,6 +417,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
