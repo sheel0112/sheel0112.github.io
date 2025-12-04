@@ -13,9 +13,11 @@
     <div class="container header-inner">
       <div class="logo">Samuel Heel</div>
       <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="about.html" class="nav-link">About</a>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Me</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#risk-thinking" class="nav-link">Risk Thinking</a>
+        <a href="#learning" class="nav-link">What I'm Learning</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
@@ -28,86 +30,211 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">Product · Risk · Fintech</p>
-          <h1>Tools and experiences that make complex financial systems feel simple.</h1>
+          <h1>Product Owner specialising in real-time risk systems, now moving from sports trading to fintech innovation.</h1>
           <p class="hero-subtitle">
-            I work at the edge of product, engineering, and risk – shaping internal platforms and
-            customer experiences for banking and trading teams.
+            I make complex risk systems simple, secure, and scalable — applying those principles to banking and fintech products
+            where speed, safety, and clarity matter equally.
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="projects.html">View projects</a>
-            <a class="btn ghost" href="#about">Learn more</a>
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn ghost" href="#contact">Let's connect</a>
           </div>
 
           <div class="hero-meta">
             <span class="pill">Internal tooling</span>
             <span class="pill">Risk & pricing</span>
             <span class="pill">Data-driven decisions</span>
+            <span class="pill">Fintech & banking</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects -->
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>About me</h2>
+          <p class="section-intro">Why I got into product, and why I'm leaning hard into fintech.</p>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h3>Why product?</h3>
+            <p>
+              I moved into product to bridge the space between engineering detail and the real-world pressure of trading desks.
+              I enjoy making complicated systems usable, reliable, and fast for the people who depend on them.
+            </p>
+            <p>
+              Sports trading risk taught me to deliver under time pressure, measure exposure in real time, and communicate
+              decisions with clarity. Those habits transfer directly to regulated fintech environments.
+            </p>
+            <p>
+              Fintech and banking excite me because the stakes are higher: more users, tighter controls, and opportunities to
+              build trust through great tooling. I'm looking for teams that care about safety and velocity in equal measure.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>How I work</h3>
+            <ul class="list-check">
+              <li><strong>Collaborative:</strong> open comms with engineering, data, design, and ops.</li>
+              <li><strong>Calm under pressure:</strong> comfortable shipping when risk is high and time is short.</li>
+              <li><strong>Curious:</strong> always pairing with engineers and analysts to understand the edge cases.</li>
+              <li><strong>Global outlook:</strong> experienced across UK, EU, and North America with a bias for inclusive teams.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case studies -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Selected work</h2>
+          <h2>Case studies</h2>
           <p class="section-intro">
-            A small set of projects that show how I think about systems, users, and delivery
-            in regulated financial environments.
+            Short case studies that show how I approach context, risk, and delivery. Some details are abstracted for confidentiality.
           </p>
         </div>
 
         <div class="grid grid-3">
-          
-          <!-- Finance app card -->
           <article class="card hover-lift">
             <div class="card-body">
-              <p class="card-eyebrow">Personal finance</p>
-              <h3>Stacked – Personal Finance & Budgeting App</h3>
-              <p>
-                A web app for young adults and couples that connects to bank accounts,
-                categorises spend, and surfaces simple, automated budgeting suggestions.
-              </p>
+              <p class="card-eyebrow">Personal finance · Fintech</p>
+              <h3>Stacked – Personal Finance & Budgeting</h3>
+              <ul class="case-points">
+                <li><strong>Context:</strong> Young adults and couples needed clearer budgeting guidance.</li>
+                <li><strong>Problem:</strong> Manual categorisation and unclear insights drove poor adoption.</li>
+                <li><strong>Action:</strong> Shaped account linking, auto-categorisation, and insight surfacing with design + data.</li>
+                <li><strong>Result:</strong> Early testers saw ~25% faster budgeting setup and higher weekly engagement.</li>
+                <li><strong>Tools:</strong> Roadmapping, UX flows, data modelling, stakeholder demos.</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div class="tag-row">
-                <span class="pill pill-soft">Fintech</span>
                 <span class="pill pill-soft">Product strategy</span>
                 <span class="pill pill-soft">Data & ML</span>
+                <span class="pill pill-soft">Risk & compliance lens</span>
               </div>
-
-              <!-- UPDATED LINKS -->
               <div class="card-actions">
-                <a class="card-link" href="projects/project-finance-app.html">
-                  View case study →
-                </a>
-                <a class="card-link" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">
-                  View code on GitHub →
-                </a>
+                <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
+                <a class="card-link" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">View code on GitHub →</a>
               </div>
             </div>
           </article>
 
-          <!-- Other cards unchanged -->
           <article class="card hover-lift">
             <div class="card-body">
-              <p class="card-eyebrow">Personal Finance ML</p>
-              <h3>Personal Spending Trends </h3>
-              <p>
-                Analytics concept surfacing monthly patterns, unusual spend, and merchant anomalies.
-              </p>
+              <p class="card-eyebrow">Risk automation</p>
+              <h3>UAT Automation for Trading Risk</h3>
+              <ul class="case-points">
+                <li><strong>Context:</strong> Live trading risk platform with rapidly changing models.</li>
+                <li><strong>Problem:</strong> Manual regression testing slowed releases and missed edge cases.</li>
+                <li><strong>Action:</strong> Built Python + SignalR suite with structured test packs and observability.</li>
+                <li><strong>Result:</strong> Cut testing time by ~50% and reduced missed regression errors by ~80%.</li>
+                <li><strong>Tools:</strong> Python, SQL validation, user story writing, delivery leadership.</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div class="tag-row">
-                <span class="pill pill-soft">Analytics</span>
-                <span class="pill pill-soft">CX</span>
+                <span class="pill pill-soft">Automation</span>
+                <span class="pill pill-soft">Risk</span>
+                <span class="pill pill-soft">Delivery</span>
               </div>
               <a class="card-link muted" href="#">Case study coming soon</a>
             </div>
           </article>
 
+          <article class="card hover-lift">
+            <div class="card-body">
+              <p class="card-eyebrow">Decisioning</p>
+              <h3>Risk & Pricing Insight Console</h3>
+              <ul class="case-points">
+                <li><strong>Context:</strong> Trading teams needed one view of exposure, pricing, and controls.</li>
+                <li><strong>Problem:</strong> Fragmented tooling made it hard to see risk posture quickly.</li>
+                <li><strong>Action:</strong> Led cross-functional squad to design dashboards with alerting and audit trails.</li>
+                <li><strong>Result:</strong> Improved issue detection speed and reduced manual workflows by ~40%.</li>
+                <li><strong>Tools:</strong> KPI design, Figma prototypes, stakeholder reviews, launch playbooks.</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="tag-row">
+                <span class="pill pill-soft">Internal tooling</span>
+                <span class="pill pill-soft">Risk</span>
+                <span class="pill pill-soft">Analytics</span>
+              </div>
+              <a class="card-link muted" href="#">Case study coming soon</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision-making style -->
+    <section id="risk-thinking" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Decision-making style</h2>
+          <p class="section-intro">How I balance speed, safety, and clarity when product decisions get complex.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="panel">
+            <ul class="list-bullets">
+              <li>Data-informed, but willing to move on intuition when the signals are directional.</li>
+              <li>Calm in pressure-driven environments with clear escalation paths.</li>
+              <li>User-first and regulation-aware — I optimise for trust, not just throughput.</li>
+              <li>Collaborative across functions with crisp, concise communication.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>How I think about risk</h3>
+            <ol class="list-steps">
+              <li><strong>Identify early:</strong> map operational, data, and regulatory risks with teams.</li>
+              <li><strong>Quantify:</strong> impact/likelihood scoring and clear owners for each risk.</li>
+              <li><strong>Communicate:</strong> simple status rituals and visual cues everyone understands.</li>
+              <li><strong>Balance:</strong> design guardrails that protect users while enabling product bets.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why fintech appeals -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Why fintech appeals to me</h2>
+        </div>
+        <div class="panel">
+          <p><strong>Personal motivation:</strong> I enjoy building trust in systems people rely on every day — whether that is a trader checking exposure or a customer checking their balance.</p>
+          <p><strong>Shared skills:</strong> Sports trading taught me to think probabilistically, prioritise speed with safety, and build feedback loops. Those skills map directly to fintech and banking workflows.</p>
+          <p><strong>Future goals:</strong> Join a fintech or banking team where I can lead risk-aware product delivery, modernise internal tooling, and mentor teams on decision quality.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning -->
+    <section id="learning" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>What I'm learning now</h2>
+          <p class="section-intro">Keeping my toolkit sharp with focused learning and community.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="panel">
+            <ul class="list-check">
+              <li>Python for data analysis (DataCamp)</li>
+              <li>Open Banking APIs and data sharing models</li>
+              <li>RegTech trends in banking and payments</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <ul class="list-check">
+              <li>Attending Fintech Insider meetups and industry roundtables</li>
+              <li>Reading “The FINTECH Book” and mapping ideas into product experiments</li>
+              <li>Exploring dashboard visuals that explain risk and exposure simply</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -117,10 +244,15 @@
       <div class="container narrow">
         <div class="section-header">
           <h2>Contact</h2>
+          <p class="section-intro">Open to product roles in fintech and banking, and happy to collaborate on risk-focused tooling.</p>
         </div>
         <p>If you'd like to talk product, fintech, or tooling:</p>
         <p>Email: <a href="mailto:samheel01@gmail.com">samheel01@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sam-heel-931513158/" target="_blank">https://www.linkedin.com/in/sam-heel-931513158/</a></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:samheel01@gmail.com">Let's connect</a>
+          <a class="btn ghost" href="Samuel_Heel_CV.pdf" target="_blank">Download resume</a>
+        </div>
       </div>
     </section>
   </main>
