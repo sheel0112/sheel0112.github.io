@@ -1,70 +1,96 @@
-/* -----------------------------------------------
-   SMOOTH SCROLLING FOR NAV LINKS
-------------------------------------------------- */
+/* -------------------------------------------------------
+   ENABLE JS-ONLY ANIMATIONS
+------------------------------------------------------- */
+document.documentElement.classList.add("js-enabled");
+
+/* -------------------------------------------------------
+   SMOOTH SCROLL FOR ALL INTERNAL LINKS
+------------------------------------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", e => {
-    const target = document.querySelector(link.getAttribute("href"));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
+  link.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
+
+    e.preventDefault();
+    window.scrollTo({
+      top: target.offsetTop - 70,
+      behavior: "smooth"
+    });
   });
 });
 
-
-/* -----------------------------------------------
-   ACTIVE NAV HIGHLIGHT ("Scroll Spy")
-------------------------------------------------- */
-
+/* -------------------------------------------------------
+   SCROLL SPY (HIGHLIGHT ACTIVE SECTION IN NAV)
+------------------------------------------------------- */
 const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
+const desktopLinks = document.querySelectorAll(".desktop-nav .nav-link");
+const mobileLinks = document.querySelectorAll(".pill-btn");
 
-function activateNav() {
-  let scrollPos = window.scrollY + 120; // accounts for header height
-
-  sections.forEach(section => {
-    const top = section.offsetTop;
-    const height = section.offsetHeight;
-    const id = section.getAttribute("id");
-
-    if (scrollPos >= top && scrollPos < top + height) {
-      // remove previous active
-      navLinks.forEach(link => link.classList.remove("active"));
-
-      // set new active
-      const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add("active");
-    }
-  });
+function activateNav(id) {
+  desktopLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === `#${id}`));
+  mobileLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === `#${id}`));
 }
 
-window.addEventListener("scroll", activateNav);
+window.addEventListener("scroll", () => {
+  let current = "";
 
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (scrollY >= top) current = section.getAttribute("id");
+  });
 
-/* -----------------------------------------------
-   SCROLL FADE-IN ANIMATIONS (Stripe-style)
-------------------------------------------------- */
+  if (current) activateNav(current);
+});
 
-const revealItems = document.querySelectorAll(
-  ".panel, .card, .timeline-item, .section-header, .hero-inner"
-);
-
-const observer = new IntersectionObserver(
+/* -------------------------------------------------------
+   REVEAL ANIMATION (FADE-IN ON SCROLL)
+------------------------------------------------------- */
+const revealObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("reveal");
-        observer.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) entry.target.classList.add("reveal");
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.15 }
 );
 
-revealItems.forEach(item => observer.observe(item));
+document.querySelectorAll(".timeline-item, .panel, .card, .hero-copy").forEach(el => {
+  el.classList.add("reveal"); // initial state
+  revealObserver.observe(el);
+});
 
-/* Add CSS class immediately for JS-enabled reveal animations */
-document.body.classList.add("js-enabled");
+/* -------------------------------------------------------
+   FLOATING MOBILE NAV — AUTO HIDE/SHOW
+------------------------------------------------------- */
+let lastScroll = 0;
+const mobileNav = document.querySelector(".mobile-pill-nav");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 120) {
+    // scrolling down → hide
+    mobileNav.style.opacity = "0";
+    mobileNav.style.transform = "translate(-50%, 20px)";
+  } else {
+    // scrolling up → show
+    mobileNav.style.opacity = "1";
+    mobileNav.style.transform = "translate(-50%, 0)";
+  }
+  lastScroll = currentScroll;
+});
+
+/* -------------------------------------------------------
+   TIMELINE INTERACTION
+   - Desktop: expand on hover (handled by CSS)
+   - Mobile: tap to expand
+------------------------------------------------------- */
+document.querySelectorAll(".timeline-item").forEach(item => {
+  const toggle = item.querySelector(".timeline-toggle");
+
+  toggle.addEventListener("click", () => {
+    if (window.innerWidth < 860) {
+      item.classList.toggle("expanded");
+    }
+  });
+});

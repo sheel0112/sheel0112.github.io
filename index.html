@@ -10,169 +10,185 @@
 
 <body>
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header class="site-header glass">
     <div class="container header-inner">
       <div class="logo">Samuel Heel</div>
-      <nav class="nav">
+      <nav class="nav desktop-nav">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#risk-thinking" class="nav-link">Risk Thinking</a>
-        <a href="#learning" class="nav-link">Learning</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="home">
+  <!-- Floating Mobile Pill Navigation -->
+  <nav class="mobile-pill-nav">
+    <a href="#home" class="pill-btn">
+      <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-3H9v3a2 2 0 0 1-2 2H3z"/></svg>
+      <span>Home</span>
+    </a>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <a href="#about" class="pill-btn">
+      <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm-7 9v-1a6 6 0 0 1 12 0v1z"/></svg>
+      <span>About</span>
+    </a>
+
+    <a href="#experience" class="pill-btn">
+      <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 3h18v4H3zm0 7h18v4H3zm0 7h18v4H3z"/></svg>
+      <span>Experience</span>
+    </a>
+
+    <a href="#projects" class="pill-btn">
+      <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2l9 4.5v9L12 22 3 15.5v-9z"/></svg>
+      <span>Projects</span>
+    </a>
+
+    <a href="#contact" class="pill-btn">
+      <svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 8v11H3V8l9 5z"/><path d="M3 6l9 5 9-5" /></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section">
+      <div class="hero-gradient"></div>
       <div class="container hero-inner">
-        <p class="eyebrow">Product · Risk · Fintech</p>
-        <h1>Product Owner specialising in real-time risk systems — now moving from sports trading into fintech innovation.</h1>
+        <div class="hero-copy">
+          <p class="eyebrow">Product · Risk · Fintech</p>
 
-        <p class="hero-subtitle">
-          I build scalable internal tools, simplify high-stakes decisions, and design risk-aware product flows that hold up under pressure.
-        </p>
+          <h1>
+            Product Owner specialising in real-time risk systems, now moving from sports trading to fintech innovation.
+          </h1>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Let's Connect</a>
-        </div>
+          <p class="hero-subtitle">
+            I design clear, secure internal tools that handle complexity — and I’m applying that mindset to financial products built for trust and scale.
+          </p>
 
-        <div class="hero-meta">
-          <span class="pill">Internal Tooling</span>
-          <span class="pill">Risk & Pricing</span>
-          <span class="pill">Data-driven Decisions</span>
-          <span class="pill">Fintech & Banking</span>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn ghost" href="#contact">Let's connect</a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="pill">Internal tooling</span>
+            <span class="pill">Risk & pricing</span>
+            <span class="pill">Data-driven decisions</span>
+            <span class="pill">Fintech & banking</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section id="about" class="section section-alt">
       <div class="container narrow">
         <div class="section-header">
-          <h2>About Me</h2>
-          <p class="section-intro">A product mindset shaped by high-pressure risk environments.</p>
+          <h2>About</h2>
+          <p class="section-intro">Why I build the way I build.</p>
         </div>
 
-        <div class="panel">
+        <div class="panel reveal">
           <p>
-            I got into product to make complex systems feel simple and dependable. 
-            Working in sports trading exposed me to high-stakes decisions where speed and safety must coexist — 
-            that mindset now guides how I build fintech and banking products.
+            I bridge the gap between engineering detail and operational pressure. My background in sports trading taught me to deliver under time constraints, communicate clearly, and optimise systems used in high-stakes environments.
           </p>
-
           <p>
-            I focus on designing tooling for teams who need clarity, reliability, and near real-time insight. 
-            If a product reduces cognitive load and removes friction, it creates space for better judgement.
+            Fintech excites me because it’s where usability, regulation, and trust intersect. My goal is to design safe, scalable internal tools and help teams make better decisions through visibility and control.
           </p>
-
-          <ul class="list-check">
-            <li><strong>Values:</strong> collaborative, calm under pressure, relentlessly curious.</li>
-            <li><strong>Mindset:</strong> global experience across UK, EU, and North America.</li>
-            <li><strong>Goal:</strong> guide teams toward risk-aware, user-first product delivery.</li>
-          </ul>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION (TIMELINE) -->
+    <!-- EXPERIENCE (Vertical Timeline) -->
     <section id="experience" class="section">
       <div class="container narrow">
         <div class="section-header">
           <h2>Experience</h2>
-          <p class="section-intro">A timeline of roles, responsibilities, and product impact.</p>
+          <p class="section-intro">Hover on desktop or tap on mobile to expand each role.</p>
         </div>
 
-        <div class="timeline-container">
-          <div class="timeline-line"></div>
+        <div class="timeline">
 
-          <!-- ROLE 1 -->
-          <div class="timeline-item">
+          <!-- Item -->
+          <article class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-header">
-              <span class="timeline-role">Lead Risk Product Owner – Digital Risk Platform</span>
-              <span class="timeline-company">Angstrom Sports (Entain)</span>
-              <span class="timeline-dates">2024 – Present</span>
-            </div>
-            <p class="timeline-summary">
-              Owning a £20m risk platform, delivering pricing, exposure, and automation tooling.
-            </p>
+
+            <button class="timeline-toggle">
+              <div class="timeline-header-row">
+                <div>
+                  <div class="timeline-role">Lead Risk Product Owner – Digital Risk Platform</div>
+                  <div class="timeline-company">Angstrom Sports · Risk</div>
+                </div>
+                <div class="timeline-dates">2024 – Present</div>
+              </div>
+              <div class="timeline-summary">
+                Leading delivery of a £20m risk platform powering global sports operations.
+              </div>
+            </button>
+
             <div class="timeline-details">
               <ul>
-                <li>Built the first cross-functional risk product org across FE/BE, data & UI.</li>
-                <li>Reduced manual work by ~40% through automation & simplification.</li>
-                <li>Implemented structured feedback loops and KPI-driven decisioning.</li>
-                <li>Accelerated prototyping using AI (cut FE cycles 8 weeks → 2 weeks).</li>
+                <li>Report directly to Head of Product and provide C-suite delivery insight.</li>
+                <li>Created Angstrom’s first cross-functional risk team.</li>
+                <li>Cut manual workload by ~40% through automation.</li>
+                <li>Led major UI overhaul and pricing workflow redesign.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <!-- ROLE 2 -->
-          <div class="timeline-item">
+          <!-- Item -->
+          <article class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-header">
-              <span class="timeline-role">Product Analyst / Shadow Product Owner – Baseball</span>
-              <span class="timeline-company">Angstrom Sports</span>
-              <span class="timeline-dates">2024</span>
-            </div>
-            <p class="timeline-summary">
-              Bridged analysis and product workflows, building automation for UAT & regression testing.
-            </p>
+
+            <button class="timeline-toggle">
+              <div class="timeline-header-row">
+                <div>
+                  <div class="timeline-role">Product Analyst & Shadow Product Owner – Baseball</div>
+                  <div class="timeline-company">Angstrom Sports</div>
+                </div>
+                <div class="timeline-dates">2024</div>
+              </div>
+              <div class="timeline-summary">
+                Designed automation workflows and supported feature delivery across sports.
+              </div>
+            </button>
+
             <div class="timeline-details">
               <ul>
-                <li>Designed Python → React testing automation suite for MLB markets.</li>
-                <li>Cut regression time by ~50% and error rates by ~80%.</li>
-                <li>Wrote detailed stories & epics for complex model-driven systems.</li>
+                <li>Built UAT automation reducing test time by ~50%.</li>
+                <li>Shaped requirements into Epics & Stories for engineering teams.</li>
+                <li>Supported multi-sport operational handover and cross-team delivery.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <!-- ROLE 3 -->
-          <div class="timeline-item">
+          <!-- Item -->
+          <article class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-header">
-              <span class="timeline-role">Sports Trader & Product Testing Specialist</span>
-              <span class="timeline-company">Amelco Limited</span>
-              <span class="timeline-dates">2022 – 2023</span>
-            </div>
-            <p class="timeline-summary">
-              Specialist at validating product behaviour, regulation alignment, and operational readiness.
-            </p>
+
+            <button class="timeline-toggle">
+              <div class="timeline-header-row">
+                <div>
+                  <div class="timeline-role">Sports Trader & Product Testing Specialist</div>
+                  <div class="timeline-company">Amelco</div>
+                </div>
+                <div class="timeline-dates">2022 – 2023</div>
+              </div>
+              <div class="timeline-summary">
+                Sat between operators, clients, and engineering to ensure accurate platform delivery.
+              </div>
+            </button>
+
             <div class="timeline-details">
               <ul>
-                <li>Standardised testing for regulated, high-volume deployments.</li>
-                <li>Coordinated between clients, vendors & engineering teams.</li>
-                <li>Introduced automation to reduce manual overhead.</li>
+                <li>Analysed live markets and ensured trading platform accuracy.</li>
+                <li>Built repeatable testing processes for regulated clients.</li>
               </ul>
             </div>
-          </div>
-
-          <!-- ROLE 4 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-header">
-              <span class="timeline-role">Lead Performance Analyst</span>
-              <span class="timeline-company">Multiple elite teams</span>
-              <span class="timeline-dates">2016 – 2022</span>
-            </div>
-            <p class="timeline-summary">
-              Delivered real-time analysis to coaches & athletes under match pressure.
-            </p>
-            <div class="timeline-details">
-              <ul>
-                <li>Supported England Rugby League, WSL & professional clubs.</li>
-                <li>Provided live insight and tactical decision support.</li>
-                <li>Owned full workflow from data capture to reporting.</li>
-              </ul>
-            </div>
-          </div>
-
+          </article>
         </div>
       </div>
     </section>
@@ -182,88 +198,34 @@
       <div class="container">
         <div class="section-header">
           <h2>Projects</h2>
-          <p class="section-intro">Selected work across fintech, automation, and internal tools.</p>
         </div>
 
         <div class="grid grid-2">
-
-          <article class="card hover-lift">
-            <p class="card-eyebrow">Fintech</p>
-            <h3>Stacked – Personal Finance App</h3>
-            <p>Smart budgeting + ML categorisation + personalised insights.</p>
-            <div class="tag-row">
-              <span class="pill pill-soft">Fintech</span>
-              <span class="pill pill-soft">ML</span>
-              <span class="pill pill-soft">UX</span>
+          <article class="card hover-lift reveal">
+            <div class="card-body">
+              <p class="card-eyebrow">Fintech</p>
+              <h3>Stacked – Personal Finance App</h3>
+              <p>Smart budgeting + auto-categorisation with personalised insights.</p>
             </div>
-            <div class="card-actions">
+            <div class="card-footer">
               <a class="card-link" href="projects/project-finance-app.html">View case study →</a>
             </div>
           </article>
 
-          <article class="card hover-lift">
-            <p class="card-eyebrow">Ops Tooling</p>
-            <h3>Coming Soon</h3>
-            <p>More internal tools & automation projects coming.</p>
+          <article class="card hover-lift reveal">
+            <div class="card-body">
+              <p class="card-eyebrow">Ops Tooling</p>
+              <h3>Coming Soon</h3>
+            </div>
+            <div class="card-footer">
+              <p class="card-link muted">Case study coming soon</p>
+            </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- RISK THINKING -->
-    <section id="risk-thinking" class="section">
-      <div class="container narrow">
-        <div class="section-header">
-          <h2>Decision-Making & Risk Thinking</h2>
-        </div>
-
-        <div class="panel">
-          <ul class="list-bullets">
-            <li>Data-led, but willing to move when signals are directional.</li>
-            <li>Calm under pressure with clear escalation patterns.</li>
-            <li>User-first and regulation-aware.</li>
-            <li>Concise communicator across engineering & trading teams.</li>
-          </ul>
-
-          <ol class="list-steps">
-            <li><strong>Identify early:</strong> map operational, data & regulatory risk.</li>
-            <li><strong>Quantify:</strong> score likelihood + impact.</li>
-            <li><strong>Communicate:</strong> concise visuals + status updates.</li>
-            <li><strong>Balance:</strong> protect users while enabling product velocity.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEARNING -->
-    <section id="learning" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>What I'm Learning</h2>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="panel">
-            <ul class="list-check">
-              <li>Python for analytics & automation</li>
-              <li>Open Banking APIs</li>
-              <li>RegTech & compliance patterns</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <ul class="list-check">
-              <li>Fintech meetups & product communities</li>
-              <li>Reading “The FINTECH Book”</li>
-              <li>Exploring better risk data visualisation</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container narrow">
         <div class="section-header">
@@ -272,14 +234,13 @@
 
         <p>If you'd like to talk product, fintech, or tooling:</p>
         <p>Email: <a href="mailto:samheel01@gmail.com">samheel01@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sam-heel-931513158/" target="_blank">View profile</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sam-heel-931513158/" target="_blank">linkedin.com/in/sam-heel</a></p>
 
-        <div class="hero-actions" style="margin-top: 20px;">
+        <div class="hero-actions">
           <a class="btn primary" href="mailto:samheel01@gmail.com">Let's connect</a>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -288,10 +249,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
   <script src="script.js"></script>
-
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
