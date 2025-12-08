@@ -53,6 +53,7 @@
   </nav>
 
   <main>
+
     <!-- HERO -->
     <section id="home" class="hero section">
       <div class="hero-gradient"></div>
@@ -102,96 +103,121 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE (Vertical Timeline) -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container narrow">
         <div class="section-header">
           <h2>Experience</h2>
-          <p class="section-intro">Hover on desktop or tap on mobile to expand each role.</p>
+          <p class="section-intro">Tap (mobile) or hover (desktop) to expand each role.</p>
         </div>
 
         <div class="timeline">
 
-          <!-- Item -->
+          <!-- Angstrom – Lead Product Owner -->
           <article class="timeline-item">
             <div class="timeline-dot"></div>
-
             <button class="timeline-toggle">
               <div class="timeline-header-row">
                 <div>
                   <div class="timeline-role">Lead Risk Product Owner – Digital Risk Platform</div>
-                  <div class="timeline-company">Angstrom Sports · Risk</div>
+                  <div class="timeline-company">Angstrom Sports (Entain) · Risk Department</div>
                 </div>
-                <div class="timeline-dates">2024 – Present</div>
+                <div class="timeline-dates">Nov 2024 – Present</div>
               </div>
               <div class="timeline-summary">
-                Leading delivery of a £20m risk platform powering global sports operations.
+                Leading a £20m digital risk platform covering pricing, exposure, automation, and trader tooling.
               </div>
             </button>
-
             <div class="timeline-details">
               <ul>
-                <li>Report directly to Head of Product and provide C-suite delivery insight.</li>
-                <li>Created Angstrom’s first cross-functional risk team.</li>
-                <li>Cut manual workload by ~40% through automation.</li>
-                <li>Led major UI overhaul and pricing workflow redesign.</li>
+                <li>Built and led the first cross-functional risk product team spanning FE/BE, data engineering, and UI/UX.</li>
+                <li>Reduced operational effort by <strong>~40%</strong> through automation and workflow simplification.</li>
+                <li>Drove adoption metrics, KPI architecture, and a unified risk ecosystem strategy.</li>
+                <li>Collaborated across NBA, NFL, MLB risk stakeholders.</li>
+                <li>Used AI-led prototyping to cut UI delivery from 8 weeks → <strong>2 weeks</strong>.</li>
               </ul>
             </div>
           </article>
 
-          <!-- Item -->
+          <!-- MLB Shadow PO -->
           <article class="timeline-item">
             <div class="timeline-dot"></div>
-
             <button class="timeline-toggle">
               <div class="timeline-header-row">
                 <div>
                   <div class="timeline-role">Product Analyst & Shadow Product Owner – Baseball</div>
                   <div class="timeline-company">Angstrom Sports</div>
                 </div>
-                <div class="timeline-dates">2024</div>
+                <div class="timeline-dates">Jan 2024 – Nov 2024</div>
               </div>
               <div class="timeline-summary">
-                Designed automation workflows and supported feature delivery across sports.
+                Bridged analysis, testing automation, and product ownership across MLB pricing and risk workflows.
               </div>
             </button>
-
             <div class="timeline-details">
               <ul>
-                <li>Built UAT automation reducing test time by ~50%.</li>
-                <li>Shaped requirements into Epics & Stories for engineering teams.</li>
-                <li>Supported multi-sport operational handover and cross-team delivery.</li>
+                <li>Built a Python-based UAT automation suite used daily by traders.</li>
+                <li>Cut regression testing by <strong>50%</strong> and reduced missed errors by <strong>80%</strong>.</li>
+                <li>Transitioned UAT tools into a fully shared web app (SignalR + React).</li>
+                <li>Authored epics, requirements, and SQL/Python validation workflows.</li>
               </ul>
             </div>
           </article>
 
-          <!-- Item -->
+          <!-- Amelco -->
           <article class="timeline-item">
             <div class="timeline-dot"></div>
-
             <button class="timeline-toggle">
               <div class="timeline-header-row">
                 <div>
                   <div class="timeline-role">Sports Trader & Product Testing Specialist</div>
-                  <div class="timeline-company">Amelco</div>
+                  <div class="timeline-company">Amelco Limited</div>
                 </div>
-                <div class="timeline-dates">2022 – 2023</div>
+                <div class="timeline-dates">Mar 2022 – Dec 2023</div>
               </div>
               <div class="timeline-summary">
-                Sat between operators, clients, and engineering to ensure accurate platform delivery.
+                Sat between clients, ops, and engineering to deliver compliant, high-volume sportsbook platforms.
               </div>
             </button>
-
             <div class="timeline-details">
               <ul>
-                <li>Analysed live markets and ensured trading platform accuracy.</li>
-                <li>Built repeatable testing processes for regulated clients.</li>
+                <li>Supported launches across US operators.</li>
+                <li>Standardised UAT across clients, reducing operational overhead.</li>
+                <li>Developed automation concepts later used in company-wide workflows.</li>
               </ul>
             </div>
           </article>
+
+          <!-- Performance Analyst -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <button class="timeline-toggle">
+              <div class="timeline-header-row">
+                <div>
+                  <div class="timeline-role">Senior & Lead Performance Analyst (Rugby & Football)</div>
+                  <div class="timeline-company">PASS · WSL · Skylab · Hartpury · Cheltenham</div>
+                </div>
+                <div class="timeline-dates">2016 – 2022</div>
+              </div>
+              <div class="timeline-summary">
+                Delivered real-time and post-match analytics for elite rugby and football teams.
+              </div>
+            </button>
+            <div class="timeline-details">
+              <ul>
+                <li>Live tactical feedback during high-pressure matches.</li>
+                <li>Opposition analysis and player modelling.</li>
+                <li>Created full analysis pipelines still used today.</li>
+              </ul>
+            </div>
+          </article>
+
         </div>
+
+        <p class="timeline-hint">Tap (mobile) or hover (desktop) to expand each role.</p>
+
       </div>
-    </section>
+    </section> <!-- ✅ This was the missing closing tag -->
 
     <!-- PROJECTS -->
     <section id="projects" class="section section-alt">
@@ -241,6 +267,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -250,6 +277,8 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
