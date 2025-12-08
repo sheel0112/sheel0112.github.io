@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MLB UAT Automation Platform – Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Case study: Building a scalable UAT automation and pricing validation platform for MLB markets." />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <div class="logo">Samuel Heel</div>
+      <nav class="nav desktop-nav">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#projects" class="nav-link active">Projects</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+
+      <!-- Back Link -->
+      <a href="../index.html#projects" class="back-link">
+        ← Back to Projects
+      </a>
+
+      <h1>MLB UAT Automation Platform</h1>
+      <p class="project-meta">
+        Automation · Pricing Validation · Internal Tooling · Risk Controls
+      </p>
+
+      <!-- Executive Summary -->
+      <section class="panel reveal">
+        <h2>Executive summary</h2>
+        <p>
+          I designed and delivered a full UAT automation suite for MLB pricing, replacing manual testing with a scalable
+          platform that performs complete market validation in minutes. This tool reduced regression errors by <strong>80%</strong>
+          and cut testing time by <strong>50%</strong>, becoming the blueprint for automation across NBA, NFL, and future risk systems.
+        </p>
+      </section>
+
+      <!-- Context -->
+      <section class="panel reveal">
+        <h2>Strategic context</h2>
+        <p>
+          MLB pricing creates thousands of market-level combinations. Historically, each release involved:
+        </p>
+        <ul class="list-bullets">
+          <li>large Excel sheets and manual comparison</li>
+          <li>unrepeatable test flows across operators</li>
+          <li>inconsistent testing depth between testers</li>
+          <li>no regression framework</li>
+        </ul>
+        <p>
+          Operational risk increased with every model update — the business needed automation, visibility, and confidence.
+        </p>
+      </section>
+
+      <!-- Problem -->
+      <section class="panel reveal">
+        <h2>The problem</h2>
+        <p>
+          The core challenge was scale. Manual testing couldn’t keep up with:
+        </p>
+        <ul class="list-bullets">
+          <li>operator-specific behaviour differences</li>
+          <li>complex ladder structures</li>
+          <li>multi-market dependencies</li>
+          <li>settlement and pricing edge cases</li>
+        </ul>
+        <p>
+          Pricing updates became slow, risky, and resource-heavy.
+        </p>
+      </section>
+
+      <!-- Constraints -->
+      <section class="panel reveal">
+        <h2>Constraints</h2>
+        <ul class="list-bullets">
+          <li>No guaranteed engineering resources</li>
+          <li>Needed to run entirely on static Athena datasets</li>
+          <li>Validation rules had to mirror real model behaviour</li>
+          <li>Tool had to work across operators, even with structural differences</li>
+        </ul>
+      </section>
+
+      <!-- Role -->
+      <section class="panel reveal">
+        <h2>My role</h2>
+        <p>
+          This was a full-stack product ownership initiative:
+        </p>
+        <ul class="list-bullets">
+          <li>mapped complete MLB pricing lifecycle and rules</li>
+          <li>designed the validation framework and checks</li>
+          <li>built the initial Python automation engine</li>
+          <li>managed transition to a React + SignalR web app</li>
+          <li>defined KPIs, coverage, and adoption goals</li>
+          <li>collaborated with traders, engineering, and analysts daily</li>
+        </ul>
+      </section>
+
+      <!-- Senior PM Actions -->
+      <section class="panel reveal">
+        <h2>What I delivered</h2>
+        <ul class="list-bullets">
+          <li>Rules engine validating alignment, ladders, envelopes, correlation, and settlement</li>
+          <li>Multi-operator validation modes for BetMGM, Entain, etc.</li>
+          <li>Excel + CSV reporting with automatic exception highlighting</li>
+          <li>Regression test library to standardise model release QA</li>
+          <li>Web app interface enabling multi-user access and visibility</li>
+          <li>Framework for future automation across all sports</li>
+        </ul>
+      </section>
+
+      <!-- Impact -->
+      <section class="panel reveal">
+        <h2>Impact</h2>
+        <ul class="list-bullets">
+          <li><strong>50% faster</strong> test cycles</li>
+          <li><strong>80% reduction</strong> in missed regression errors</li>
+          <li>Full-market coverage (instead of spot-checking)</li>
+          <li>Safer, more confident mid-season model updates</li>
+          <li>Platform adopted across multiple sports</li>
+        </ul>
+      </section>
+
+      <!-- Fintech relevance -->
+      <section class="panel reveal">
+        <h2>Relevance to fintech & banking</h2>
+        <p>
+          This project mirrors how financial institutions build risk controls:
+        </p>
+        <ul class="list-bullets">
+          <li>pricing envelopes ≈ risk limits</li>
+          <li>settlement behaviour ≈ trade lifecycle modelling</li>
+          <li>multi-operator differences ≈ multi-region regulatory variance</li>
+          <li>validation checks ≈ pre-trade & post-trade controls</li>
+        </ul>
+        <p>
+          It demonstrates comfort with automation, control design, and data-driven risk processes.
+        </p>
+      </section>
+
+      <!-- Placeholder visuals (will be designed in Option D) -->
+      <section class="panel reveal">
+        <h2>System overview (visual placeholder)</h2>
+        <p>A diagram of the validation engine, pricing data flow, and reporting pipeline will go here.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
