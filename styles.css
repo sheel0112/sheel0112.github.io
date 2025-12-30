@@ -135,6 +135,7 @@ body {
   border: 1px solid rgba(148,163,184,0.18);
 
   box-shadow: 0 8px 35px rgba(0,0,0,0.45);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .pill-btn {
@@ -326,6 +327,48 @@ body {
   color: var(--text-muted);
 }
 
+.card-body h3 {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.card-body p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.card-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.card-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.card-link:hover {
+  opacity: 0.8;
+}
+
+.card-link.muted {
+  color: var(--text-muted);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65);
+}
+
 /* -------------------------------------------------------
    TIMELINE (DESKTOP + MOBILE HYBRID)
 ------------------------------------------------------- */
@@ -384,6 +427,19 @@ body {
   color: var(--text-muted);
 }
 
+.timeline-dates {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timeline-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Details hidden unless expanded */
 .timeline-details {
   max-height: 0;
@@ -430,6 +486,113 @@ body {
   color: var(--text-muted);
   font-size: 13px;
   border-top: 1px solid rgba(148,163,184,0.15);
+}
+
+/* -------------------------------------------------------
+   PROJECT PAGE ELEMENTS
+------------------------------------------------------- */
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.project-meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.pillbox {
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 141, 253, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.pillbox h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.list-bullets {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.list-bullets li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.list-steps {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.list-steps li {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.eyebrow-soft {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* -------------------------------------------------------
+   CONTACT SECTION
+------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-item h3 {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+}
+
+.contact-text {
+  color: var(--text);
+  font-size: 15px;
+  margin: 0;
 }
 
 /* -------------------------------------------------------
