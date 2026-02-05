@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Longevity Risk Model – Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Case study: Excel-based longevity risk model with Lee-Carter and CBD mortality frameworks." />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <div class="logo">Samuel Heel</div>
+      <nav class="nav desktop-nav">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#projects" class="nav-link active">Projects</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+
+      <!-- Back Link -->
+      <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+      <h1>Longevity Risk Model</h1>
+      <p class="project-meta">
+        Longevity · Annuities · Solvency II · Excel Prototype
+      </p>
+
+      <!-- Executive Summary -->
+      <section class="panel reveal">
+        <h2>Executive summary</h2>
+        <p>
+          I built a comprehensive longevity risk model in Excel that connects mortality modeling with annuity
+          valuation and solvency metrics. The model provides a CRO-ready view of best-estimate liabilities, capital
+          requirements, and sensitivity to mortality improvements.
+        </p>
+      </section>
+
+      <!-- Mortality Models -->
+      <section class="panel reveal">
+        <h2>Mortality modeling framework</h2>
+        <ul class="list-bullets">
+          <li><strong>Mortality data:</strong> HMD-style central death rates with log-mortality and improvement rates.</li>
+          <li><strong>Lee-Carter:</strong> αx, βx, κt estimation and stochastic κt projection (random walk with drift).</li>
+          <li><strong>CBD:</strong> Two-factor logit(qx,t) model with correlated level and slope factors.</li>
+        </ul>
+      </section>
+
+      <!-- Life Tables -->
+      <section class="panel reveal">
+        <h2>Life tables and liability projection</h2>
+        <p>
+          Period life tables translate mortality assumptions into survival curves, annuity factors, and projected
+          cash flows. The model provides a full 30-year liability projection with duration and convexity metrics.
+        </p>
+        <ul class="list-bullets">
+          <li>qx, px, lx, dx, Lx, Tx, ex columns with survival probabilities.</li>
+          <li>Portfolio of 15 annuitants with benefit types and demographic splits.</li>
+          <li>Best-estimate liability (BEL) calculation and risk margin.</li>
+        </ul>
+      </section>
+
+      <!-- Risk Metrics -->
+      <section class="panel reveal">
+        <h2>Risk and capital metrics</h2>
+        <ul class="list-bullets">
+          <li>Solvency II SCR using a -20% mortality shock scenario.</li>
+          <li>Cost-of-capital risk margin with sensitivity to discount rates.</li>
+          <li>VaR at 99.5% from Monte Carlo liability distributions.</li>
+        </ul>
+      </section>
+
+      <!-- Why it matters -->
+      <section class="panel reveal">
+        <h2>Why this prototype is useful</h2>
+        <p>
+          This model demonstrates how actuarial assumptions flow through to capital, pricing, and risk appetite.
+          It provides a transparent, auditable framework that can be adapted for ALM, pricing, or regulatory reporting.
+        </p>
+      </section>
+
+      <!-- Next Steps -->
+      <section class="panel reveal">
+        <h2>Next steps</h2>
+        <ul class="list-bullets">
+          <li>Add cohort effects and calendar-year improvements.</li>
+          <li>Extend the portfolio to longevity swaps and pension buy-ins.</li>
+          <li>Integrate scenario generator for economic + longevity correlation.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
