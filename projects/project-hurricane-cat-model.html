@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hurricane Catastrophe Model Prototype – Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Case study: Building an Excel-based hurricane catastrophe model prototype with hazard, exposure, vulnerability, and financial modules." />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <div class="logo">Samuel Heel</div>
+      <nav class="nav desktop-nav">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#projects" class="nav-link active">Projects</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+
+      <!-- Back Link -->
+      <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+      <h1>Hurricane Catastrophe Model Prototype</h1>
+      <p class="project-meta">
+        Catastrophe Modeling · Portfolio Risk · Excel Prototype
+      </p>
+
+      <!-- Executive Summary -->
+      <section class="panel reveal">
+        <h2>Executive summary</h2>
+        <p>
+          I built a hurricane catastrophe model prototype in Excel to demonstrate a full end-to-end workflow,
+          from hazard generation through portfolio loss aggregation. The model mirrors how a CRO views cat risk:
+          exceedance probability curves, VaR/TVaR metrics, and portfolio risk insights.
+        </p>
+      </section>
+
+      <!-- Model Architecture -->
+      <section class="panel reveal">
+        <h2>Model architecture</h2>
+        <ul class="list-bullets">
+          <li><strong>Hazard module:</strong> Holland wind field model generating realistic storm footprints.</li>
+          <li><strong>Exposure module:</strong> Property portfolio with location, construction, and TIV attributes.</li>
+          <li><strong>Vulnerability module:</strong> HAZUS-based damage functions by construction class.</li>
+          <li><strong>Financial module:</strong> Policy terms, sublimits, and a layered reinsurance tower.</li>
+          <li><strong>Stochastic engine:</strong> Monte Carlo event catalog powering AEP/OEP curves.</li>
+        </ul>
+      </section>
+
+      <!-- Stochastic Engine -->
+      <section class="panel reveal">
+        <h2>Stochastic engine design</h2>
+        <p>
+          The simulation engine generates event frequencies, storm parameters, and loss outcomes across thousands of
+          years. The event catalog feeds loss distributions and return period metrics for capital planning.
+        </p>
+        <ul class="list-bullets">
+          <li>10,000-year Monte Carlo catalog with storm frequency and severity distributions.</li>
+          <li>Footprint-driven hazard intensities mapped to exposure locations.</li>
+          <li>Loss aggregation across portfolio and reinsurance layers.</li>
+        </ul>
+      </section>
+
+      <!-- Outputs -->
+      <section class="panel reveal">
+        <h2>Outputs that matter to a CRO</h2>
+        <ul class="list-bullets">
+          <li>OEP and AEP exceedance probability curves (2–1,000-year return periods).</li>
+          <li>VaR and TVaR metrics with capital adequacy ratios.</li>
+          <li>Portfolio risk insights by state, construction, and coastal proximity.</li>
+        </ul>
+      </section>
+
+      <!-- Why it matters -->
+      <section class="panel reveal">
+        <h2>Why this prototype is useful</h2>
+        <p>
+          The model shows how hazard, exposure, and vulnerability assumptions translate into economic loss and
+          capital decisions. It provides a structured, auditable workflow that mirrors cat modeling practice while
+          staying accessible in Excel for rapid scenario analysis.
+        </p>
+      </section>
+
+      <!-- Next Steps -->
+      <section class="panel reveal">
+        <h2>Next steps</h2>
+        <ul class="list-bullets">
+          <li>Expand to multi-peril (wind + surge) and secondary uncertainty.</li>
+          <li>Integrate climate-conditioned frequency assumptions.</li>
+          <li>Link to portfolio growth and underwriting strategy scenarios.</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
