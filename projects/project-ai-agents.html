@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Case Study – AI Agents for Product Teams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Case study: AI agents and automations Samuel Heel designed and built to take repetitive work off product and risk teams." />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <div class="logo">Samuel Heel</div>
+      <nav class="nav desktop-nav">
+        <a href="../index.html#top" class="nav-link">Home</a>
+        <a href="../index.html#work" class="nav-link active">Work</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+
+      <a class="back-link" href="../index.html#work">← Back to work</a>
+
+      <h1>AI Agents for Product Teams</h1>
+      <p class="project-meta">Designer &amp; builder · Angstrom Sports / Entain + personal projects · 2025–Present</p>
+
+      <div class="pillbox">
+        <h2>Summary</h2>
+        <p>
+          A set of AI agents and automations I designed and built to take repetitive work off product and risk teams —
+          stakeholder updates, sprint write-ups, evidence gathering and design-to-ticket handoff — so people spend their
+          time on decisions rather than admin.
+        </p>
+      </div>
+
+      <h2>Context</h2>
+      <p>
+        A lot of a product team's week follows the same pattern: pull updates from Jira and Confluence, turn them into
+        something each audience can read, and move designs into tickets. It's necessary work, but it's predictable, and it
+        competes for time with discovery and prioritisation.
+      </p>
+
+      <h2>Problem</h2>
+      <p>
+        Off-the-shelf AI chat tools could help with the writing, but they didn't connect to the systems where the work lives,
+        and company data couldn't be pasted into tools outside our controlled environment. The opportunity was agents that sit
+        inside our own cloud, read from our own tools, and hand people a draft to review.
+      </p>
+
+      <h2>Constraints &amp; Principles</h2>
+      <ul class="list-bullets">
+        <li><strong>Data stays in our environment:</strong> agents run in company AWS, not third-party chat tools.</li>
+        <li><strong>Agents draft, people decide:</strong> every output is reviewable before it reaches a stakeholder.</li>
+        <li><strong>Meet people where they work:</strong> Jira, Confluence, Slack and Figma, not a new app to learn.</li>
+        <li><strong>Small and incremental:</strong> built alongside the day job, one useful agent at a time.</li>
+      </ul>
+
+      <h2>My Role</h2>
+      <p>
+        I identified the use cases from my own team's workflows, designed the agent suite, and built the agents myself in
+        C#/.NET and Python on AWS Bedrock AgentCore. Before building, I researched AgentCore's Runtime, Memory and Gateway
+        patterns so the agents could share one foundation instead of each being a one-off.
+      </p>
+
+      <h2>What I Built</h2>
+      <ol class="list-steps">
+        <li><strong>Stakeholder comms agent:</strong> drafts status updates for different audiences from delivery data.</li>
+        <li><strong>Sprint synthesiser:</strong> turns sprint data into a readable summary of what shipped and what moved.</li>
+        <li><strong>Appraisal evidence collector:</strong> gathers delivered work from across tools as evidence against goals.</li>
+        <li><strong>Figma-to-Jira plugin:</strong> turns design frames into tickets ready for refinement.</li>
+        <li><strong>Confidence-scoring agent:</strong> scores the reliability of incoming player availability information (Python, Strands).</li>
+        <li><strong>In progress:</strong> a junior PO assistant connected to Jira, Confluence and GitHub via MCP, and a risk-team Slack bot.</li>
+      </ol>
+
+      <h2>Architecture</h2>
+      <p>
+        I designed a suite of six agents on shared AgentCore foundations: one runtime pattern, shared memory, and a common
+        gateway to team tools. Each new agent reuses the same integration layer rather than starting from scratch.
+      </p>
+
+      <h2>Off the Clock</h2>
+      <p>
+        The same instinct shows up in my own projects. SME Hub is a local, privacy-first knowledge assistant that runs on
+        Ollama with AES-256-GCM encryption, so nothing leaves the machine.
+      </p>
+
+      <h2>What It Shows</h2>
+      <ul class="list-bullets">
+        <li>Spotting automation opportunities in real workflows, not looking for places to use AI.</li>
+        <li>Taking an idea from use case to a working agent without waiting for an engineering slot.</li>
+        <li>Designing for privacy, governance and human review from the start.</li>
+        <li>Thinking in platforms: shared foundations that make the next build cheaper.</li>
+      </ul>
+      <!-- Add measured outcomes here when you have them, e.g. hours saved per week on reporting. -->
+
+      <h2>Key Skills Demonstrated</h2>
+      <div class="pill-row">
+        <span class="pill">AI product thinking</span>
+        <span class="pill">AWS Bedrock AgentCore</span>
+        <span class="pill">C# · .NET</span>
+        <span class="pill">Python</span>
+        <span class="pill">MCP integrations</span>
+        <span class="pill">Workflow automation</span>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Samuel Heel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
