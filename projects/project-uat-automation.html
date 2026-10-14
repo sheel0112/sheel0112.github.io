@@ -146,78 +146,37 @@
         <h2>System overview</h2>
         <p>This diagram shows how pricing data flows through the automated validation engine, rules layer, and reporting pipeline.</p>
 
-        <div class="system-diagram">
-          <svg viewBox="0 0 900 420" width="100%" style="max-width: 900px;">
-            
-            <!-- INPUT BLOCK -->
-            <rect x="40" y="150" width="200" height="90" rx="14" 
-                  fill="rgba(59,130,246,0.12)" 
-                  stroke="rgba(59,130,246,0.5)" stroke-width="2"/>
-            <text x="140" y="195" text-anchor="middle" fill="#cbd5e1" style="font-size:16px;">
-              Pricing Data (Athena Snapshots)
-            </text>
-
-            <!-- Arrow to Validation Engine -->
-            <line x1="240" y1="195" x2="310" y2="195" stroke="#4f8dfd" stroke-width="3"/>
-            <polygon points="310,195 300,188 300,202" fill="#4f8dfd"/>
-
-            <!-- VALIDATION ENGINE BLOCK -->
-            <rect x="310" y="110" width="280" height="170" rx="16" 
-                  fill="rgba(148,163,184,0.10)"
-                  stroke="rgba(148,163,184,0.4)" stroke-width="2"/>
-            <text x="450" y="145" text-anchor="middle" fill="#e2e8f0" style="font-size:18px;font-weight:bold;">
-              Validation Engine
-            </text>
-
-            <!-- Sub-items -->
-            <text x="450" y="175" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              • Market alignment checks
-            </text>
-            <text x="450" y="195" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              • Ladder & envelope validation
-            </text>
-            <text x="450" y="215" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              • Correlated movement detection
-            </text>
-            <text x="450" y="235" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              • Operator-specific rules
-            </text>
-
-            <!-- Arrow to Rules Layer -->
-            <line x1="590" y1="195" x2="660" y2="195" stroke="#4f8dfd" stroke-width="3"/>
-            <polygon points="660,195 650,188 650,202" fill="#4f8dfd"/>
-
-            <!-- RULES LAYER BLOCK -->
-            <rect x="660" y="130" width="200" height="130" rx="14" 
-                  fill="rgba(79,141,253,0.15)" 
-                  stroke="rgba(79,141,253,0.5)" stroke-width="2"/>
-            <text x="760" y="165" text-anchor="middle" fill="#e2e8f0" style="font-size:16px;font-weight:bold;">
-              Rules Layer
-            </text>
-            <text x="760" y="195" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              Consistency, envelopes,
-            </text>
-            <text x="760" y="215" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              settlement edge cases
-            </text>
-
-            <!-- Downward arrow -->
-            <line x1="760" y1="260" x2="760" y2="310" stroke="#4f8dfd" stroke-width="3"/>
-            <polygon points="760,310 753,300 767,300" fill="#4f8dfd"/>
-
-            <!-- OUTPUT BLOCK -->
-            <rect x="600" y="310" width="320" height="90" rx="14" 
-                  fill="rgba(148,163,184,0.10)" 
-                  stroke="rgba(148,163,184,0.4)" stroke-width="2"/>
-            <text x="760" y="350" text-anchor="middle" fill="#e2e8f0" style="font-size:16px;font-weight:bold;">
-              Reporting Pipeline
-            </text>
-            <text x="760" y="375" text-anchor="middle" fill="#94a3b8" style="font-size:14px;">
-              CSV/Excel reports · exception logs · regression library
-            </text>
-
-          </svg>
-        </div>
+        <ol class="flow-diagram" aria-label="System overview: pricing data to validation engine to rules layer to reporting">
+          <li class="flow-node">
+            <p class="flow-step-no">1</p>
+            <h3>Pricing data</h3>
+            <p>Athena snapshots of live markets</p>
+          </li>
+          <li class="flow-node">
+            <p class="flow-step-no">2</p>
+            <h3>Validation engine</h3>
+            <ul>
+              <li>Market alignment checks</li>
+              <li>Ladder and envelope validation</li>
+              <li>Correlated movement detection</li>
+              <li>Operator-specific rules</li>
+            </ul>
+          </li>
+          <li class="flow-node">
+            <p class="flow-step-no">3</p>
+            <h3>Rules layer</h3>
+            <p>Consistency, envelopes and settlement edge cases</p>
+          </li>
+          <li class="flow-node">
+            <p class="flow-step-no">4</p>
+            <h3>Reporting</h3>
+            <ul>
+              <li>CSV and Excel reports</li>
+              <li>Exception logs</li>
+              <li>Regression library</li>
+            </ul>
+          </li>
+        </ol>
       </section>
 
     </div>

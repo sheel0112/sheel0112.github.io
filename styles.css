@@ -926,3 +926,17 @@ main.section .pillbox h2 { margin: 0; padding: 0; border: 0; font-size: 21px; }
   .row-go, .row-body h3, .button { transition: none; }
 }
 .container.narrow { max-width: 780px; }
+
+/* UAT system overview: HTML flow (replaces fixed-size SVG) */
+main.section ol.flow-diagram { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.flow-node { position: relative; margin: 0; padding: 18px 16px 20px; background: var(--bg-2); border: 1px solid var(--rule-strong); border-radius: 2px; }
+.flow-node:not(:last-child)::after { content: "→"; position: absolute; top: 50%; right: -25px; transform: translateY(-50%); color: var(--accent); font-size: 20px; line-height: 1; }
+main.section .flow-node h3 { margin: 4px 0 0; font-size: 18px; line-height: 1.25; }
+main.section .flow-node p { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: var(--text-muted); }
+main.section .flow-node p.flow-step-no { margin: 0; font-size: 13px; color: var(--accent); }
+main.section .flow-node ul { margin: 8px 0 0; padding-left: 16px; font-size: 14px; line-height: 1.5; }
+main.section .flow-node li { margin: 0 0 4px; color: var(--text-muted); }
+@media (max-width: 760px) {
+  main.section ol.flow-diagram { grid-template-columns: 1fr; gap: 30px; }
+  .flow-node:not(:last-child)::after { content: "↓"; top: auto; right: auto; left: 50%; bottom: -26px; transform: translateX(-50%); }
+}
