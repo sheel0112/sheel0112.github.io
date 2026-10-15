@@ -910,7 +910,7 @@ main.section .pillbox h2 { margin: 0; padding: 0; border: 0; font-size: 21px; }
   .header-inner { padding-bottom: 8px; }
 }
 @media (max-width: 640px) {
-  .wrap { padding: 0 20px; }
+  .wrap { padding-left: 20px; padding-right: 20px; }
   section[id] { scroll-margin-top: 110px; }
   .intro { padding-top: 56px; padding-bottom: 64px; }
   .intro-story { font-size: 18px; }
