@@ -947,6 +947,6 @@ main.section .flow-node li { margin: 0 0 4px; color: var(--text-muted); }
 .intro-photo { grid-column: 2; grid-row: 1 / span 3; width: 280px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; border: 1px solid var(--rule); }
 @media (max-width: 900px) {
   .intro { grid-template-columns: 1fr; }
-  .intro-photo { grid-column: 1; grid-row: auto; width: 112px; aspect-ratio: 1; border-radius: 999px; margin-bottom: 24px; }
+  .intro-photo { grid-column: 1; grid-row: auto; width: 128px; aspect-ratio: 4 / 5; border-radius: 6px; margin-bottom: 28px; }
 }
-.intro-photo { object-position: 50% 20%; }
+.intro-photo { object-position: 50% 50%; }
