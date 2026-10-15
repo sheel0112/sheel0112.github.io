@@ -950,3 +950,16 @@ main.section .flow-node li { margin: 0 0 4px; color: var(--text-muted); }
   .intro-photo { grid-column: 1; grid-row: auto; width: 128px; aspect-ratio: 4 / 5; border-radius: 6px; margin-bottom: 28px; }
 }
 .intro-photo { object-position: 50% 50%; }
+
+
+/* Intro role line, seeking line, header CV button, case-study summaries */
+.intro .intro-role { margin: 0; font-size: 15px; letter-spacing: 0.01em; color: var(--accent); }
+.intro h1 { margin-top: 18px; }
+.intro .intro-seeking { margin: 16px 0 0; font-size: 17px; color: var(--text); }
+.intro-photo { grid-row: 1 / span 5; }
+.nav-cta { min-height: 38px; padding: 0 16px; font-size: 14px; }
+.tldr { margin: 28px 0 0; padding: 18px 22px; background: var(--bg-2); border-left: 2px solid var(--accent); }
+main.section .tldr p { margin: 0; color: var(--text); }
+main.section .tldr p + p { margin-top: 10px; }
+.tldr strong { color: var(--accent); font-weight: 600; }
+@media (max-width: 900px) { .intro-photo { grid-row: auto; } }
