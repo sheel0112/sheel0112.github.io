@@ -949,3 +949,4 @@ main.section .flow-node li { margin: 0 0 4px; color: var(--text-muted); }
   .intro { grid-template-columns: 1fr; }
   .intro-photo { grid-column: 1; grid-row: auto; width: 112px; aspect-ratio: 1; border-radius: 999px; margin-bottom: 24px; }
 }
+.intro-photo { object-position: 50% 20%; }
