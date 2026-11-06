@@ -46,7 +46,7 @@
 
       <div class="tldr">
         <p><strong>What I did:</strong> Took Stacked, my first budgeting prototype, and rebuilt it as Admin Bestie: one app for a household's money, bills, plans and training, on the web and on iPhone, iPad and Mac.</p>
-        <p><strong>Result:</strong> In daily use in my own home, opened up to a partner and friends with their own private households, and now in App Store review with a paid household subscription and a public launch site.</p>
+        <p><strong>Result:</strong> In daily use in my own home, opened up to a partner and friends with their own private households, and now in App Store review, with a public launch site.</p>
       </div>
 
       <div class="hero-actions">
@@ -104,7 +104,7 @@
         One Cloudflare Worker serves both the React front end and the API, with Cloudflare D1 (SQLite) for data and cron
         triggers for scheduled jobs. Every feature is a self-contained module on each side, registered with one line, so
         new sections are added without touching the others. The iPhone, iPad and Mac apps wrap the same code with
-        Capacitor, adding native in-app subscriptions, Siri and Shortcuts.
+        Capacitor, adding Siri and Shortcuts.
       </p>
       <ul class="list-bullets">
         <li><strong>Privacy enforced by tests:</strong> a test scans every SQL statement in the codebase and fails if one touching household or personal data doesn't filter by its owner. Another plants data in separate households and checks nothing leaks across.</li>
@@ -113,17 +113,16 @@
         <li><strong>Over 900 automated tests</strong> run before every release, and database migrations run before the code that needs them.</li>
       </ul>
 
-      <h2>Taking it to market</h2>
+      <h2>Getting it ready for launch</h2>
       <ul class="list-bullets">
-        <li><strong>Positioning and pricing:</strong> benchmarked against budgeting, bill-splitting and gym apps, then set a 14-day free trial with no payment details, followed by one monthly or yearly subscription covering the whole household.</li>
         <li><strong>Launch site:</strong> <a href="https://adminbestie.app" target="_blank" rel="noopener">adminbestie.app</a>, with a waitlist, an invite-a-friend loop that moves you up the list, cookie-free visit tracking by source and campaign, and SEO content such as a split-bills-by-income calculator.</li>
-        <li><strong>Release readiness:</strong> privacy notices, account deletion, age rules by country and a storefront-by-storefront review of where selling is allowed, before submitting to Apple. The app is now in App Store review.</li>
+        <li><strong>Release readiness:</strong> privacy notices, account deletion, age rules by country and a country-by-country review of where it can launch, before submitting to Apple. The app is now in App Store review.</li>
       </ul>
 
       <h2>What it shows</h2>
       <ul class="list-bullets">
         <li>Treating v1 as a learning step: using my own product, finding where it fell short, and changing the strategy instead of polishing features.</li>
-        <li>Taking a product the whole way: discovery, design, build, pricing, compliance and go-to-market.</li>
+        <li>Taking a product the whole way: discovery, design, build, compliance and launch.</li>
         <li>Designing for trust from the start: data separation, privacy and fail-safe defaults.</li>
         <li>Building on platforms so each new feature is cheaper than the last.</li>
       </ul>
@@ -138,7 +137,7 @@
       <h2>Key skills demonstrated</h2>
       <div class="pill-row">
         <span class="pill">Product strategy</span>
-        <span class="pill">Pricing &amp; go-to-market</span>
+        <span class="pill">Product launch</span>
         <span class="pill">React</span>
         <span class="pill">Cloudflare Workers · D1</span>
         <span class="pill">iOS · Capacitor</span>
