@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Personal finance tools – Samuel Heel</title>
+  <title>From Stacked to Admin Bestie – Samuel Heel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://samuelheel.me/projects/project-finance-app.html" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta property="og:site_name" content="Samuel Heel" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Personal finance tools – Samuel Heel" />
-  <meta property="og:description" content="Stacked, a budgeting app with automatic categorisation and a live demo." />
+  <meta property="og:title" content="From Stacked to Admin Bestie – Samuel Heel" />
+  <meta property="og:description" content="How a budgeting prototype became Admin Bestie: a household life-admin app for money, bills, plans and the gym, on the web and the App Store." />
   <meta property="og:url" content="https://samuelheel.me/projects/project-finance-app.html" />
   <meta property="og:image" content="https://samuelheel.me/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Samuel Heel, Senior Product Owner: I find where the value is in the data, then build the product that captures it." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Personal finance tools – Samuel Heel" />
-  <meta name="twitter:description" content="Stacked, a budgeting app with automatic categorisation and a live demo." />
+  <meta name="twitter:title" content="From Stacked to Admin Bestie – Samuel Heel" />
+  <meta name="twitter:description" content="How a budgeting prototype became Admin Bestie: a household life-admin app for money, bills, plans and the gym, on the web and the App Store." />
   <meta name="twitter:image" content="https://samuelheel.me/og-image.png" />
   <link rel="stylesheet" href="../styles.css?v=20261016a" />
-  <meta name="description" content="Stacked, a budgeting app with automatic categorisation and a live demo." />
+  <meta name="description" content="How a budgeting prototype became Admin Bestie: a household life-admin app for money, bills, plans and the gym, on the web and the App Store." />
 </head>
 <body>
   <header class="site-header glass">
@@ -34,86 +34,117 @@
     </div>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="container narrow">
-        <a href="../index.html#work" class="back-link">← Back to work</a>
+  <main class="section">
+    <div class="container narrow">
+      <a href="../index.html#work" class="back-link">← Back to work</a>
 
-        <p class="eyebrow eyebrow-soft">Side project · Personal finance</p>
-        <h1>Stacked – Personal Finance & Budgeting App</h1>
-        <p class="project-meta">Side project · Product owner and builder · ML-driven spend insights</p>
+      <p class="eyebrow eyebrow-soft">Side project · Version 2</p>
+      <h1>From Stacked to Admin Bestie</h1>
+      <p class="project-meta">Product owner and builder · Personal finance → household life admin · 2025–Present</p>
 
       <div class="tldr">
-        <p><strong>What I did:</strong> Designed and built a budgeting app that categorises transactions automatically and shows where the money goes.</p>
-        <p><strong>Result:</strong> A working app used at home, with a public demo you can try.</p>
+        <p><strong>What I did:</strong> Took Stacked, my first budgeting prototype, and rebuilt it as Admin Bestie: one app for a household's money, bills, plans and training, on the web and on iPhone, iPad and Mac.</p>
+        <p><strong>Result:</strong> In daily use in my own home, opened up to a partner and friends with their own private households, and taken through to an App Store release with a paid subscription and a public launch site.</p>
       </div>
 
-        <!-- CTA BUTTONS ADDED -->
-        <div class="hero-actions" style="margin-bottom: 20px;">
-          <a class="btn primary" href="stacked-demo/" target="_blank" rel="noopener">
-            Open live demo
-          </a>
-          <!-- Repo is private; re-enable if it's made public:
-          <a class="btn ghost" href="https://github.com/sheel0112/v0-spending-model-app" target="_blank">View code on GitHub</a>
-          -->
-        </div>
-
-        <div class="pillbox">
-          <h2>Summary</h2>
-          <ul>
-            <li>Personal finance tool designed around automation over manual budgeting.</li>
-            <li>ML-assisted transaction categorisation for cleaner insights.</li>
-            <li>System design built for open banking integrations.</li>
-          </ul>
-        </div>
-
-        <h2>Context & problem</h2>
-        <p>
-          Many budgeting tools assume users will manually maintain categories, envelopes and tags.
-          Stacked flips this: it prioritises automation, low effort, and clear month-end insights.
-        </p>
-
-        <h2>Constraints</h2>
-        <ul>
-          <li>Built to integrate cleanly with APIs like TrueLayer.</li>
-          <li>Requires explainability for category/nudge decisions.</li>
-          <li>Mobile-first design for daily use and weekly summaries.</li>
-        </ul>
-
-        <h2>Approach</h2>
-        <h3>User behaviour insights</h3>
-        <p>Aimed at users who want clarity with minimal maintenance. No spreadsheets, no heavy UI.</p>
-
-        <h3>System shaping</h3>
-        <ul>
-          <li>API ingestion → cleansing → categorisation engine → insights layer → UI.</li>
-          <li>Custom category rules + ML suggestions with confidence scores.</li>
-          <li>“One-screen” summary with drilldown for anomalies.</li>
-        </ul>
-
-        <h2>Outcomes</h2>
-        <ul>
-          <li>Clear product story and user value proposition.</li>
-          <li>Scalable data model for real bank feeds.</li>
-          <li>Foundation for shared budgeting and couple-mode.</li>
-        </ul>
-
-        <h2>Where this applies</h2>
-        <p>Built for personal use, but the building blocks are common:</p>
-        <ul>
-          <li><strong>Categorisation with confidence scores:</strong> expense management, accounting software, product tagging, support ticket routing</li>
-          <li><strong>Insight-first, low-maintenance UX:</strong> any product where users won't keep data up to date by hand</li>
-          <li><strong>Bank feed ingestion:</strong> lending and affordability checks, accounting integrations</li>
-        </ul>
-
-        <h2>Next steps</h2>
-        <p>
-          Next iterations: deeper ML clusters, shared spending flows, and explainable insights for
-          end users.
-        </p>
-
+      <div class="hero-actions">
+        <a class="btn primary" href="https://adminbestie.app" target="_blank" rel="noopener">Visit adminbestie.app</a>
+        <a class="btn ghost" href="stacked-demo/" target="_blank" rel="noopener">Try the Stacked v1 demo</a>
       </div>
-    </section>
+
+      <div class="pillbox">
+        <h2>Summary</h2>
+        <p>
+          Stacked proved the idea: automate the budgeting and show where the money went. Using it for real showed what it
+          was missing. Money at home is shared, bills don't follow calendar months, and spending is only one of the things
+          people keep in separate apps. Admin Bestie is the answer to that: one place for the money, the bills, the plans and
+          the gym, built for people who live on their phones.
+        </p>
+      </div>
+
+      <h2>Version 1: Stacked</h2>
+      <p>
+        A budgeting web app built around automation instead of manual upkeep: transactions categorised for you, a
+        one-screen month summary, and a data model shaped for bank feeds such as TrueLayer. It worked as a product story
+        and a demo, and it's still live below for comparison.
+      </p>
+      <ul class="list-bullets">
+        <li>Rule-based and ML-suggested categories, each with a confidence score.</li>
+        <li>Ingestion → cleansing → categorisation → insights pipeline.</li>
+        <li>Built for one person, in a browser.</li>
+      </ul>
+
+      <h2>What real use taught me</h2>
+      <ul class="list-bullets">
+        <li><strong>Money is a household thing.</strong> Shared bills need splitting fairly, by income, and settling up. A single-user budget can't answer "who owes who".</li>
+        <li><strong>Logging has to be effortless or it stops.</strong> Typing in every coffee doesn't last a month.</li>
+        <li><strong>Months don't start on the 1st.</strong> Pay days and card cycles do, and weekly bills land four or five times a month.</li>
+        <li><strong>Money is one piece of life admin.</strong> Bills, renewals, tasks, the calendar and the gym all live in different apps. Pulling them together is the real value.</li>
+      </ul>
+
+      <h2>Version 2: Admin Bestie</h2>
+      <p>
+        A rebuild from scratch, designed around those lessons and kept simple for first-time users while keeping the
+        detail underneath.
+      </p>
+      <ol class="list-steps">
+        <li><strong>Households, not just users:</strong> invite a partner into your household, or a friend into a private one of their own. Shared bills are the household's, personal spending stays personal, and income stays private.</li>
+        <li><strong>Fair splits:</strong> shared bills split by each person's share of income, with overspends re-split at the bill's usual ratio and a preview of the impact on next month.</li>
+        <li><strong>Logging with no typing:</strong> Apple Pay purchases log themselves through an iOS Shortcuts automation, and a receipt photo fills in the spend line by line using an AI model. The photo itself is never stored.</li>
+        <li><strong>Where the money went:</strong> a daily spending pot, bills on your own pay cycle, overspend drill-downs and a financial planner in plain language.</li>
+        <li><strong>The rest of life admin:</strong> tasks, a calendar synced from your own feeds, document and insurance renewals that raise a reminder ahead of time, and a gym log.</li>
+        <li><strong>An app that speaks:</strong> a weekly brief and push notifications, so it tells you what needs attention instead of waiting to be opened.</li>
+        <li><strong>Any currency, any timezone:</strong> a base currency per household, second-currency spends priced at the day's rate, and a timezone per person.</li>
+      </ol>
+
+      <h2>Architecture</h2>
+      <p>
+        One Cloudflare Worker serves both the React front end and the API, with Cloudflare D1 (SQLite) for data and cron
+        triggers for scheduled jobs. Every feature is a self-contained module on each side, registered with one line, so
+        new sections are added without touching the others. The iPhone, iPad and Mac apps wrap the same code with
+        Capacitor, adding native in-app subscriptions, Siri and Shortcuts.
+      </p>
+      <ul class="list-bullets">
+        <li><strong>Privacy enforced by tests:</strong> a test scans every SQL statement in the codebase and fails if one touching household or personal data doesn't filter by its owner. Another plants data in separate households and checks nothing leaks across.</li>
+        <li><strong>Money rounds once:</strong> figures are stored in a canonical form and converted for display, so two screens never disagree by a penny.</li>
+        <li><strong>Derived, not stored:</strong> the current month and which month a payment belongs to are calculated, so nothing goes stale overnight.</li>
+        <li><strong>Over 900 automated tests</strong> run before every release, and database migrations run before the code that needs them.</li>
+      </ul>
+
+      <h2>Taking it to market</h2>
+      <ul class="list-bullets">
+        <li><strong>Positioning and pricing:</strong> benchmarked against budgeting, bill-splitting and gym apps, then set a 14-day free trial with no payment details, followed by one monthly or yearly subscription covering the whole household.</li>
+        <li><strong>Launch site:</strong> <a href="https://adminbestie.app" target="_blank" rel="noopener">adminbestie.app</a>, with a waitlist, an invite-a-friend loop that moves you up the list, cookie-free visit tracking by source and campaign, and SEO content such as a split-bills-by-income calculator.</li>
+        <li><strong>Release readiness:</strong> privacy notices, account deletion, age rules by country and a storefront-by-storefront review of where selling is allowed, before submitting to Apple.</li>
+      </ul>
+
+      <h2>What it shows</h2>
+      <ul class="list-bullets">
+        <li>Treating v1 as a learning step: using my own product, finding where it fell short, and changing the strategy instead of polishing features.</li>
+        <li>Taking a product the whole way: discovery, design, build, pricing, compliance and go-to-market.</li>
+        <li>Designing for trust from the start: data separation, privacy and fail-safe defaults.</li>
+        <li>Building on platforms so each new feature is cheaper than the last.</li>
+      </ul>
+
+      <h2>Where this applies</h2>
+      <ul class="list-bullets">
+        <li><strong>Shared and multi-party accounts:</strong> joint finances, family plans, team billing, any product where data is partly shared and partly private.</li>
+        <li><strong>Low-effort data capture:</strong> expense management, insurance claims and any workflow where people won't keep data up to date by hand.</li>
+        <li><strong>Product-led growth:</strong> referral loops, waitlists and attributed acquisition for a consumer launch.</li>
+      </ul>
+
+      <h2>Key skills demonstrated</h2>
+      <div class="pill-row">
+        <span class="pill">Product strategy</span>
+        <span class="pill">Pricing &amp; go-to-market</span>
+        <span class="pill">React</span>
+        <span class="pill">Cloudflare Workers · D1</span>
+        <span class="pill">iOS · Capacitor</span>
+        <span class="pill">AI receipt reading</span>
+        <span class="pill">Privacy by design</span>
+      </div>
+
+    </div>
   </main>
 
   <footer class="site-footer">
